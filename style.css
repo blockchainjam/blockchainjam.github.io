@@ -1,0 +1,15 @@
+.navigation-bar {
+    position: sticky;
+}
+
+
+.container-1500px {
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.container-1000px {
+    width: 1000px;
+    margin: 0 auto;
+}
+
