@@ -1,15 +1,170 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 .navigation-bar {
-    position: sticky;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+}
+.navigation-bar img {
+    height: 1em;
+    display: block;
+}
+.navigation-bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
 }
 
 
 .container-1500px {
-    width: 1500px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 .container-1000px {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
+.back1 {
+    background: url(images/back1.svg);
+}
+.back2 {
+    background: url(images/back2.svg);
+}
+.back1, .back2 {
+    background-position: center top;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    height: 750px;
+    margin: 0;
+}
+
+.when {
+    color: white;
+}
+.when:first-child {
+    text-align: start;
+}
+.when:last-child {
+    text-align: end;
+}
+
+.abstract {
+    overflow: visible;
+    position: relative;
+    padding-top: 3em;
+}
+.abstract img {
+    height: 6em;
+    display: block;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.abstract .concept * {
+    text-align: center;
+}
+
+.abstract .concept::before, .abstract .concept::after {
+    border-top: 1px solid;
+    content: "";
+}
+
+.outline {
+    background: #f2f2f2;
+    background-image: url(images/outline.svg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.topics {
+    background: #f2f2f2;
+
+}
+
+.information {
+    background: #f2f2f2;
+}
+
+.information iframe {
+    width: 100%;
+}
+
+.sponsorship {
+    background: #f2f2f2;
+}
+
+.contact {
+    background: #f2f2f2;
+}
+
+.item {
+    padding-bottom: 30px;
+}
+
+.item p {
+    text-align: center;
+}
+
+.item h4 {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    margin: 0;
+    background: linear-gradient(to right, #8cabba, #638ca5);
+}
+
+.item h3, .item h5 {
+    text-align: center;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    margin: 6px 0;
+}
+label.textarea {
+    flex-direction: column;
+}
+
+label span {
+    padding: 12px;
+    background: #d6d6d6;
+    color: dimgray;
+}
+label input {
+    flex: auto;
+}
+
+label input, label textarea {
+    border: none;
+    padding: 12px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+button {
+    padding: 12px;
+    text-align: center;
+    color: white;
+    background: #638ca5;
+    border: none;
+    display: block;
+    width: 100%;
+}

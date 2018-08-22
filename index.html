@@ -3,23 +3,41 @@
 
 <head>
     <title>BlockchainJam</title>
-    <link src="style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <div class="container-1500px">
         <div class="navigation-bar">
-
+            <img src="images/logo.svg" />
+            <ul>
+                <li>
+                    <a>イベントについて</a>
+                </li>
+                <li>
+                    <a>登壇者</a>
+                </li>
+                <li>
+                    <a>イベント情報</a>
+                </li>
+                <li>
+                    <a>アクセス</a>
+                </li>
+                <li>
+                    <a>お問い合わせ</a>
+                </li>
+            </ul>
         </div>
-        <div class="top">
+
+        <div class="back1">
+
             <p class="when">
-                チケット発売日 2018.00.00　2018.10.21 SUN Roppongi, Tokyo
-            </p>
-            <h1>BlockChainJAM 2018</h1>
-            <h3>ブロックチェーンのこれから</h3>
-            <h2>「一足先の未来を知る1日」</h2>
+                <span>2018.10.21 SUN Roppongi, Tokyo</span>
+                <span>チケット発売日 2018.00.00</span>
+            </div>
         </div>
         <div class="abstract">
+            <img src="images/logo.svg" />
             <div class="container-1000px">
                 <div class="concept">
                     <h3>BlockChainJAM</h3>
@@ -33,13 +51,15 @@
                 </p>
             </div>
         </div>
-        <div class="outline">
+        <div class="back2">
+        </div>
+        <div class="outline item">
             <h4>OUTLINE</h4>
             <div class="container-1000px">
-                <h5>
+                <h3>
                     これからの未来を創る
                     <br /> 「ブロックチェーン」の可能性を探求する
-                </h5>
+                </h3>
                 <p>
                     ビットコインや仮想通貨という言葉はよく知られています。
                     <br /> では、それらを支える技術「ブロックチェーン」とはいったい何なのでしょうか？
@@ -62,15 +82,45 @@
                 </p>
             </div>
         </div>
-        <div class="topics">
+        <div class="topics item">
             <h4>TOPICS &amp; SPEAKERS</h4>
 
         </div>
-        <div class="information">
+        <div class="information item">
             <h4>INFORMATION</h4>
             <h5>BlockchainJAM 2018</h5>
+            <table>
+                <tr>
+                    <td>日時</td>
+                    <td>2018/10/21(Sun)</td>
+                </tr>
+                <tr>
+                    <td>時間</td>
+                    <td>15:00～18:00</td>
+                </tr>
+                <tr>
+                    <td>会場</td>
+                    <td>六本木アカデミーヒルズ　タワーホール</td>
+                </tr>
+                <tr>
+                    <td>チケット発売日</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>チケット料金</td>
+                    <td>一般10,000円/学生3,000円</td>
+                </tr>
+            </table>
+            <h5>ACCESS</h5>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6719954668542!2d139.72686701525828!3d35.660452130199225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b88edeca0e1ff0e!2z44Ki44Kr44OH44Of44O844OS44Or44K6!5e0!3m2!1sja!2sjp!4v1534922949970"
+                height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <p>
+                【六本木アカデミーヒルズ　タワーホール】
+                <br/> 〒106-6149 東京都港区六本木6丁目10番1号 六本木ヒルズ森タワー49階
+                <br/> （東京メトロ・日比谷線「六本木駅」1C出口より徒歩3分）
+            </p>
         </div>
-        <div class="sponsorship">
+        <div class="sponsorship item">
             <h4>SPONSORSHIP</h4>
             <div class="container-1000px">
 
@@ -80,11 +130,29 @@
                 <hr />
             </div>
         </div>
-        <div class="contact">
+        <div class="contact item">
             <h4>CONTACT</h4>
             <div class="container-1000px">
                 <p>イベントについてのお問い合わせは下記フォームよりお願いいたします。</p>
-                <p>※メディア取材のお申し込みは<a href="">こちら</a></p>
+                <p>※メディア取材のお申し込みは
+                    <a href="">こちら</a>
+                </p>
+
+                <form>
+                    <label class="input">
+                        <span>お名前</span>
+                        <input id="name" name="name" type="text" />
+                    </label>
+                    <label class="input">
+                        <span>Email</span>
+                        <input id="email" name="email" type="text" />
+                    </label>
+                    <label class="textarea">
+                        <span>お問い合わせ内容</span>
+                        <textarea id="content" name="content" rows="12"></textarea>
+                    </label>
+                    <button>確認画面へ進む</button>
+                </form>
             </div>
         </div>
     </div>
