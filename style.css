@@ -1,25 +1,58 @@
-html, body {
+body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
 }
 
 .navigation-bar {
+    color: white;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    flex-direction: row;
 }
-.navigation-bar img {
-    height: 1em;
-    display: block;
+.navigation-bar .logo {
+    background: url(images/logo-white.svg);
+    background-position: left;
+    background-repeat: no-repeat !important;
+    height: 100%;
+    flex: auto;
 }
 .navigation-bar ul {
     list-style: none;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 3em;
+
     margin: 0;
+}
+.navigation-bar ul li:not(:first-child)::before {
+    content: "|";
+}
+.navigation-bar a {
+    color: inherit;
+    padding: 12px 18px;
+}
+.navigation-bar a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.navigation-bar .twitter {
+    background: url(images/twitter.svg);
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
+
+.navigation-bar.floating {
+    color: black;
+    background: white;
+    position: fixed;
+}
+.navigation-bar.floating .logo {
+    background: url(images/logo-black.svg);
 }
 
 
@@ -47,20 +80,11 @@ html, body {
     margin: 0;
 }
 
-.when {
-    color: white;
-}
-.when:first-child {
-    text-align: start;
-}
-.when:last-child {
-    text-align: end;
-}
-
 .abstract {
+    background: white;
     overflow: visible;
     position: relative;
-    padding-top: 3em;
+    padding: 3em;
 }
 .abstract img {
     height: 6em;
@@ -68,7 +92,7 @@ html, body {
     position: absolute;
     top: -20%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-30%);
 }
 
 .abstract .concept * {
@@ -85,7 +109,10 @@ html, body {
     background-image: url(images/outline.svg);
     background-position: right bottom;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+}
+
+.outline h3 {
+    font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 
 .topics {
@@ -124,6 +151,7 @@ html, body {
     padding: 30px;
     margin: 0;
     background: linear-gradient(to right, #8cabba, #638ca5);
+    font-family: "HelveticaNeue-Thin", "Helvetica Neue Thin", "Helvetica Neue", 'Heebo', "Arial", ".HiraKakuInterface-W1";
 }
 
 .item h3, .item h5 {
