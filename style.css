@@ -6,20 +6,36 @@ body {
 }
 
 .navigation-bar {
-    color: white;
-    position: absolute;
+    color: black;
+    background: white;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
+    transition: all 1s;
 }
 .navigation-bar .logo {
-    background: url(images/logo-white.svg);
+    background: url(images/logo-black.svg);
     background-position: left !important;
     background-repeat: no-repeat !important;
     height: 100%;
     flex: auto;
 }
+.navigation-bar.hidden {
+    opacity: 0;
+}
+
+.navigation-bar.absolute {
+    color: white;
+    background: transparent;
+    position: absolute;
+    
+}
+.navigation-bar.absolute .logo {
+    background: url(images/logo-white.svg);
+}
+
 .navigation-bar ul {
     list-style: none;
     display: flex;
@@ -47,16 +63,6 @@ body {
     background-repeat: no-repeat !important;
 }
 
-.navigation-bar.floating {
-    color: black;
-    background: white;
-    position: fixed;
-}
-.navigation-bar.floating .logo {
-    background: url(images/logo-black.svg);
-}
-
-
 .container-1500px {
     max-width: 1500px;
     margin: 0 auto;
@@ -67,33 +73,50 @@ body {
     margin: 0 auto;
 }
 
-.back1 {
+.footer {
+    background: white;
+    color: #638ca5;
+    padding: 30px;
+}
+.footer * {
+    font-size: 80%;
+    text-align: center;
+}
+.footer a {
+    color: black;
+}
+.footer a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+#back1 {
     background: url(images/back1.svg);
 }
-.back2 {
+#back2 {
     background: url(images/back2.svg);
 }
-.back1, .back2 {
+#back1, #back2 {
     background-position: center top;
     background-repeat: no-repeat !important;
     background-attachment: fixed;
     background-size: 100% auto;
     margin: 0;
 }
-.back1 img, .back2 img {
+#back1 img, #back2 img {
     display: block;
     margin: 0;
     width: 100%;
     opacity: 0;
 }
 
-.abstract {
+#abstract {
     background: white;
     overflow: visible;
     position: relative;
     padding: 3em;
 }
-.abstract img {
+#abstract img {
     height: 6em;
     display: block;
     position: absolute;
@@ -102,61 +125,53 @@ body {
     transform: translateX(-30%);
 }
 
-.abstract .concept * {
+#abstract .concept * {
     text-align: center;
 }
 
-.abstract .concept::before, .abstract .concept::after {
+#abstract .concept::before, .abstract .concept::after {
     border-top: 1px solid;
     content: "";
 }
 
-.outline {
+#outline {
     background: #f2f2f2;
     background-image: url(images/outline.svg);
     background-position: right bottom;
     background-repeat: no-repeat;
 }
 
-.outline h3 {
+#outline h3 {
     font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 
-.speakers {
-    background: #f2f2f2;
-
-}
-
-.speakers .row {
+#speakers .row {
     display: flex;
-
 }
-.speakers .row
-
-.information {
-    background: #f2f2f2;
+#speakers .row .row-child {
+    display: flex;
+    width: 500px;
+}
+#speakers .row .speakers {
+    width: 400px;
+}
+#speakers .row .space {
+    width: 100px;
 }
 
-.information iframe {
+#information iframe {
     width: 100%;
 }
 
-.sponsorship {
-    background: #f2f2f2;
-}
-
-.sponsorship p {
+#sponsorship p {
     background: white;
     color: black;
     padding: 30px;
 }
 
-.contact {
-    background: #f2f2f2;
-}
-
 .item {
     padding-bottom: 30px;
+    background: #f2f2f2;
 }
 
 .item p {
@@ -177,33 +192,50 @@ body {
     text-align: center;
 }
 
-label {
+label.row {
     display: flex;
     flex-direction: row;
-    width: 100%;
     overflow: hidden;
     margin: 6px 0;
 }
-label.textarea {
+label.wide {
+    width: 100%;
+}
+label.row.textarea {
     flex-direction: column;
 }
 
-label span {
+label.row span {
     padding: 12px;
+}
+label.row span.dark {
     background: #d6d6d6;
     color: dimgray;
 }
-label input {
+label.row input {
+    width: auto;
+}
+label.row.wide input {
     flex: auto;
 }
 
-label input, label textarea {
+label.row input, label textarea {
     border: none;
     padding: 12px;
 }
 
 table {
     margin: 0 auto;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tr > td:first-child {
+    border-right: 1px solid black;
+}
+td {
+    padding: 2px;
+    border-bottom: 1px solid black;
 }
 
 button {
@@ -214,4 +246,8 @@ button {
     border: none;
     display: block;
     width: 100%;
+}
+
+button.green {
+    background: green;
 }

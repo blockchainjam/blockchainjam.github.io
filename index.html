@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="navigation-bar">
+    <div class="navigation-bar absolute">
         <div class="container-1000px">
             <ul>
                 <li class="logo">
@@ -37,10 +37,35 @@
         </div>
 
     </div>
-    <div class="back1">
+    <div class="navigation-bar hidden">
+        <div class="container-1000px">
+            <ul>
+                <li class="logo">
+
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#outline')">イベントについて</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#speakers')">登壇者</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#information')">イベント情報</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#access')">アクセス</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#contact')">お問い合わせ</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="back1">
         <img src="images/back1.svg" />
     </div>
-    <div class="abstract">
+    <div id="abstract" class="display-nav">
         <img src="images/logo.svg" />
         <div class="container-1000px">
             <div class="concept">
@@ -55,11 +80,11 @@
             </p>
         </div>
     </div>
-    <div class="back2">
+    <div id="back2">
         <img src="images/back2.svg" />
     </div>
     <div class="container-1500px">
-        <div class="outline item" id="outline">
+        <div class="item" id="outline">
             <h4>OUTLINE</h4>
             <div class="container-1000px">
                 <h3>
@@ -88,21 +113,237 @@
                 </p>
             </div>
         </div>
-        <div class="speakers item" id="topics">
+        <div class="item" id="speakers">
             <h4>SPEAKERS</h4>
             <div class="row">
                 <div class="row-child">
                     <div class="speaker">
-                        
+                        <div class="topic">
+                            <img />
+                            <span>
+                                Blockchain
+                            </span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[日本デジタルマネー協会理事]</div>
+                        <div class="name">大石 哲之 氏</div>
+                        <hr />
+                        <p class="profile">
+                            2013年よりフルタイムでビットコイン・暗号通貨の事業に関わる。ブロガーとして暗号通貨の技術を噛み砕いて紹介。暗号通貨の普及と、技術の育成を目的に活動している。<br /> (社)日本デジタルマネー協会理事、エンジェル投資家としてウォレットやクロスチェーン等の事業へ複数投資している。
+                            <br />
+                            <a>日本デジタルマネー協会</a><br />
+                            <a>ビットコイン研究所</a>
+                        </p>
                     </div>
                     <div class="space"></div>
                 </div>
                 <div class="row-child reverse">
-
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>Zilliqa</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[Zilliqa - Head of Business Development]</div>
+                        <div class="name">En Hui Ong 氏</div>
+                        <hr />
+                        <div class="profile">
+                            2010年早稲田大学国際教養学部から卒業。2011～2018年までブラックロック、J.P.モルガンで資産運用セールス担当として勤め、現在はZilliwaのビジネス担当として勤めている。CAIA資格保有者。<br
+                            />
+                            <a>Zilliqa</a>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-child">
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>Ethereum</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[Crypto economics Lab - CTO]</div>
+                        <div class="name">落合 渉悟 氏</div>
+                        <hr />
+                        <div class="profile">
+                            Ethereum、Plasma、zk-SNARKsを専門とするブロックチェーンエンジニア。現在のEthereum開発の基盤となっているCryptoeconomicsに不可欠なStakingやFormal Verificationに関するOSSks津堂を中心にアジア地域の暗号通貨プロジェクトと協業を多数行っている。マイブームは、RustとIsabelle/HOL。<br
+                            />
+                            <a>株式会社Cryptoeconomics Lab</a>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+                <div class="row-child reverse">
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>Tezos</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[Tezos Foundation]</div>
+                        <div class="name">Ather B 氏</div>
+                        <hr />
+                        <div class="profile">
+                            フランスで生まれ育った後、2007年にニューヨーク大学にてMaster's in Mathematicsを専攻。その後、モルガン・スタンレーと関連を持ち、その後はモルガン・スタンレーでの副社長の経験。2016年にモルガン・スタンレーを辞職し、現在は様々な問題を解決するために必要な暗号通貨Tezosのプロジェクトをリードしている。<br
+                            />
+                            <a>Tezos</a>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-child">
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>Cosmos</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[Cosmos - Head of Communications]</div>
+                        <div class="name">Christina Chiang 氏</div>
+                        <hr />
+                        <div class="profile">
+                            Cosmosで広報を担当。Cosmosブログの編集長としてCosmosに関する全ての映像や文字コンテンツのクリエイティブ・ディレクションを行っている。プロトコル、分散化されたシステム、ブロックチェーン技術などのテクニカルな議論をわかりやすく、かみ砕いて記事にまとめて発信している。元・NASAジェット推進研究所所属。<br　/>
+                            <a>Cosmos</a>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+                <div class="row-child reverse">
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>0x</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[0x - 日本コミュニティメンバー]</div>
+                        <div class="name">1VQ9 氏</div>
+                        <hr />
+                        <div class="profile">
+                            国内スタートアップにて研究員として勤務。2017年に0x Projectに出会い、0xを利用したDEXプロジェクトの邦訳に関わる。<br /> 0x Project 日本コミュニティの立ち上げを企画中。<br
+                            />
+                            <a></a>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-child">
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>Bitcoin</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[フレセッツ株式会社 - CEO]</div>
+                        <div class="name">日向 理彦 氏</div>
+                        <hr />
+                        <div class="profile">
+                            2008年4月に東京大学理科一塁にげ現役合格。2012年3月、同大理学部物理学科を卒業。同大総合文化研究科修士課程へ進学し、長距離相互作用のある系の熱力学・統計力学的性質の研究により修士号を取得。同大博士課程在学中にビットコインと出会い、その理論的斬新さや革新性に惹かれ次第にのめり込んでいく。<br
+                            /> 2014年1月から開始された国内初のビットコイン・クローン(オルトコイン)である「Monacoin」の取引所の開発・運営を行い、それを皮切りに採掘プール、ウォレットなど様々なサービスの設計・開発を一人で行う。その後、事業規模の拡大に伴い合同会社ジャノムを立ち上げ代表として就任。暗号通貨を中心とした技術コンサルティング・システム開発・技術提供などを行っている。
+                            <br />
+                            <a>フレセッツ株式会社</a>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+                <div class="row-child reverse">
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>Omise</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[Omise Japan 株式会社 - Country Manager]</div>
+                        <div class="name">宇野 雅晴 氏</div>
+                        <hr />
+                        <div class="profile">
+                            広告業界を経て、2015にOmiseへ。Omise Payment、OmiseGOなど日本拠点における事業統括を務める。日本でのPlasmaに関するリサーチを企業間をまたいだ形で実施。<br
+                            />
+                            <a>Omise</a>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-child">
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>Enigma</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[Enigma Ambassador]</div>
+                        <div class="name">カナゴールド 氏</div>
+                        <hr />
+                        <div class="profile">
+                            元金融機関クオンツ。2017年7月より仮想通貨トレーディングに参入。<br /> 2018年1月より仮想通貨関連技術をわかりやすく解説するブログを開始。現在は公式Enigma ambassador。<br
+                            />
+                            <a>フレセッツ株式会社</a>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+                <div class="row-child reverse">
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>Enigma</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[Enigma ambassador / Stir - COO]</div>
+                        <div class="name">うどん 氏</div>
+                        <hr />
+                        <div class="profile">
+                            主にEthereum Ecosystem周りの事について調査し思考する非エンジニア。 Twitter(@udon_crypto)で情報発信中。 Enigmaの可能性に惹かれEnigmaJapanを運営したりEnigma Ambassadorとしても活動している。
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-child">
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>Crypto-tax</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[公認会計士 / 米国公認会計士 / CFA協会認定証券アナリスト / Lost Blocks, CryptoGain CEO / 木村公認会計士事務所
+                            代表 / Quantum Accounting 株式会社 取締役]</div>
+                        <div class="name">木村 兼作 氏</div>
+                        <hr />
+                        <div class="profile">
+                            2006年にKPMG入社後、東京とニューヨークで勤務。 2016年に独立した後は複数の暗号通貨プロジェクトに関与。 週末の主な過ごし方はノードのメンテナンス。
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+                <div class="row-child reverse">
+                    <div class="speaker">
+                        <div class="topic">
+                            <img />
+                            <span>Crypto-tax</span>
+                        </div>
+                        <img class="profile-image" />
+                        <div class="company">[Quantum Accounting株式会社 取締役]</div>
+                        <div class="name">井堂裕功（いどうひろのり） 氏</div>
+                        <hr />
+                        <div class="profile">
+                            公認会計士/税理士。2006年慶應義塾大学経済学部 を卒業し、同年に有限責任あずさ監査法人に入所。上場企業の監査業務、上場支援業務などの現場責任者、マネージャーを経験し、2015年に退職。 同年、公認会計士・税理士井堂裕功事務所を開設し、複数の企業や個人事業主と税務顧問契約を締結し、税務申告業務のほか、事業承継対策、相続税対策支援業務などのサービスを提供している。
+                            近年、増えてきたCryptoに関する税務相談にも対応している。
+                        </div>
+                    </div>
+                    <div class="space"></div>
                 </div>
             </div>
         </div>
-        <div class="information item" id="information">
+        <div class="item" id="information">
             <h4>INFORMATION</h4>
             <h5>BlockchainJAM 2018</h5>
             <table>
@@ -136,7 +377,7 @@
                 <br/> （東京メトロ・日比谷線「六本木駅」1C出口より徒歩3分）
             </p>
         </div>
-        <div class="sponsorship item">
+        <div class="item">
             <h4>SPONSORSHIP</h4>
             <div class="container-1000px">
                 <p>
@@ -144,7 +385,7 @@
                 </p>
             </div>
         </div>
-        <div class="contact item" id="contact">
+        <div class="item" id="contact">
             <h4>CONTACT</h4>
             <div class="container-1000px">
                 <p>イベントについてのお問い合わせは下記フォームよりお願いいたします。</p>
@@ -153,21 +394,27 @@
                 </p>
 
                 <form>
-                    <label class="input">
-                        <span>お名前</span>
+                    <label class="row wide">
+                        <span class="dark">お名前</span>
                         <input id="name" name="name" type="text" />
                     </label>
-                    <label class="input">
-                        <span>Email</span>
+                    <label class="row wide">
+                        <span class="dark">Email</span>
                         <input id="email" name="email" type="text" />
                     </label>
-                    <label class="textarea">
-                        <span>お問い合わせ内容</span>
+                    <label class="row wide textarea">
+                        <span class="dark">お問い合わせ内容</span>
                         <textarea id="content" name="content" rows="12"></textarea>
                     </label>
                     <button>確認画面へ進む</button>
                 </form>
             </div>
+        </div>
+        <div class="footer">
+            <p>&copy; BlockChainJAM 2018 All Rights Reserved</p>
+            <p>
+                <a href="legal.html">特定商取引法に基づく表記</a>
+            </p>
         </div>
     </div>
 </body>
