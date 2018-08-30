@@ -51,19 +51,22 @@ body {
 .navigation-bar ul li:not(:first-child)::before {
     content: "|";
 }
-.navigation-bar a {
+.navigation-bar ul li a {
     color: inherit;
     padding: 12px 18px;
 }
-.navigation-bar a:hover {
+.navigation-bar ul li a:hover {
     color: inherit;
     text-decoration: underline;
 }
 
 .navigation-bar .twitter {
-    background: url(images/twitter.svg);
+    background: url(images/black.svg);
     background-position: center;
     background-repeat: no-repeat !important;
+}
+.navigation-bar.absolute .twitter {
+    background: url(images/twitter-white.svg);
 }
 
 .container-1500px {
@@ -150,11 +153,15 @@ body {
 
 #speakers .row {
     display: flex;
+    align-content: center;
     margin: 30px auto;
 }
 #speakers .row .row-child {
     display: flex;
     width: 500px;
+}
+#speakers .row .row-child.reverse {
+    flex-direction: row-reverse;
 }
 #speakers .row .speaker {
     width: 400px;
@@ -257,4 +264,13 @@ button {
 
 button.green {
     background: green;
+}
+
+@media screen and (max-width: 1000px) {
+    .navigation-bar ul {
+        display: hidden !important;
+    }
+    #speakers .row .space {
+        display: hidden !important;
+    }
 }

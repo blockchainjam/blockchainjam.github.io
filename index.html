@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>BlockChainJam</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Heebo:100" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -396,7 +397,7 @@
                     <a href="media-contact.html">こちら</a>
                 </p>
 
-                <form>
+                <form #id="contat-form" action="completed.html" method="POST">
                     <label class="row wide">
                         <span class="dark">お名前</span>
                         <input id="name" name="name" type="text" />
@@ -409,7 +410,7 @@
                         <span class="dark">お問い合わせ内容</span>
                         <textarea id="content" name="content" rows="12"></textarea>
                     </label>
-                    <button>送信</button>
+                    <button onclick="postContact()">送信</button>
                 </form>
             </div>
         </div>
