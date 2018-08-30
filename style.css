@@ -8,7 +8,7 @@ body {
 .navigation-bar {
     color: black;
     background: white;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -34,6 +34,9 @@ body {
 }
 .navigation-bar.absolute .logo {
     background: url(images/logo-white.svg);
+}
+.navigation-bar.fixed {
+    position: fixed;
 }
 
 .navigation-bar ul {
@@ -147,13 +150,17 @@ body {
 
 #speakers .row {
     display: flex;
+    margin: 30px auto;
 }
 #speakers .row .row-child {
     display: flex;
     width: 500px;
 }
-#speakers .row .speakers {
+#speakers .row .speaker {
     width: 400px;
+}
+#speakers .row .speaker .topic {
+    font-size: 150%;
 }
 #speakers .row .space {
     width: 100px;
