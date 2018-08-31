@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title>BlockChainJam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Heebo:100" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -18,7 +19,9 @@
         <div class="container-1000px">
             <ul>
                 <li class="logo">
-
+                    <a href="#">
+                        <img src="images/logo-white.svg" />
+                    </a>
                 </li>
                 <li>
                     <a href="#" onclick="scrollToSelector('#outline')">イベントについて</a>
@@ -35,15 +38,27 @@
                 <li>
                     <a href="#" onclick="scrollToSelector('#contact')">お問い合わせ</a>
                 </li>
+                <li class="twitter">
+                    <a href="#">
+                        <img src="images/twitter-white.svg" />
+                    </a>
+                </li>
             </ul>
         </div>
 
     </div>
     <div class="navigation-bar fixed hidden">
         <div class="container-1000px">
+            <label id="toggle">
+                <input type="checkbox" onchange="onCheckChanged(this.checked)" />
+                <span></span>
+            </label>
+
             <ul>
                 <li class="logo">
-
+                    <a href="#">
+                        <img src="images/logo-black.svg" />
+                    </a>
                 </li>
                 <li>
                     <a href="#" onclick="scrollToSelector('#outline')">イベントについて</a>
@@ -60,6 +75,11 @@
                 <li>
                     <a href="#" onclick="scrollToSelector('#contact')">お問い合わせ</a>
                 </li>
+                <li class="twitter">
+                    <a href="#">
+                        <img src="images/twitter-black.svg" />
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -72,7 +92,7 @@
         <div class="container-1000px">
             <div class="concept">
                 <h3>BlockChainJam</h3>
-                <h4>少し先の未来がわかる1日</h4>
+                <h4>一足先の未来を知る1日</h4>
             </div>
             <p style="text-align: center;">
                 「ブロックチェーン　ジャム」は
@@ -397,7 +417,7 @@
                     <a href="media-contact.html">こちら</a>
                 </p>
 
-                <form #id="contat-form" action="completed.html" method="POST">
+                <form #id="contact-form" action="javascript:postContact();">
                     <label class="row wide">
                         <span class="dark">お名前</span>
                         <input id="name" name="name" type="text" />
@@ -410,7 +430,7 @@
                         <span class="dark">お問い合わせ内容</span>
                         <textarea id="content" name="content" rows="12"></textarea>
                     </label>
-                    <button onclick="postContact()">送信</button>
+                    <button>送信</button>
                 </form>
             </div>
         </div>

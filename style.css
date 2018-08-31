@@ -15,25 +15,17 @@ body {
     z-index: 1;
     transition: all 1s;
 }
-.navigation-bar .logo {
-    background: url(images/logo-black.svg);
-    background-position: left !important;
-    background-repeat: no-repeat !important;
-    height: 100%;
-    flex: auto;
+.navigation-bar #toggle {
+    display: none;
 }
 .navigation-bar.hidden {
     opacity: 0;
 }
-
 .navigation-bar.absolute {
     color: white;
     background: transparent;
     position: absolute;
     
-}
-.navigation-bar.absolute .logo {
-    background: url(images/logo-white.svg);
 }
 .navigation-bar.fixed {
     position: fixed;
@@ -44,29 +36,29 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 3em;
-
     margin: 0;
 }
-.navigation-bar ul li:not(:first-child)::before {
-    content: "|";
-}
 .navigation-bar ul li a {
+    display: block;
     color: inherit;
-    padding: 12px 18px;
+    padding: 0 16px;
+    line-height: 3em;
+    height: 3em;
 }
 .navigation-bar ul li a:hover {
     color: inherit;
     text-decoration: underline;
 }
-
-.navigation-bar .twitter {
-    background: url(images/black.svg);
-    background-position: center;
-    background-repeat: no-repeat !important;
+.navigation-bar ul li.logo {
+    flex: auto;
 }
-.navigation-bar.absolute .twitter {
-    background: url(images/twitter-white.svg);
+
+.navigation-bar ul li a img {
+    height: 100%;
+}
+.navigation-bar ul li.twitter a img {
+    margin: 0.75em 0;
+    height: 1.5em;
 }
 
 .container-1500px {
@@ -155,10 +147,12 @@ body {
     display: flex;
     align-content: center;
     margin: 30px auto;
+    align-items: center;
 }
 #speakers .row .row-child {
     display: flex;
     width: 500px;
+
 }
 #speakers .row .row-child.reverse {
     flex-direction: row-reverse;
@@ -268,9 +262,44 @@ button.green {
 
 @media screen and (max-width: 1000px) {
     .navigation-bar ul {
-        display: hidden !important;
+        display: block !important;
+    }
+    .navigation-bar ul li a {
+        text-align: center;
+    }
+    .navigation-bar #toggle {
+        display: initial !important;
+    }
+    .navigation-bar.fixed #toggle input {
+        display: none;
+    }
+    .navigation-bar.fixed #toggle input + span::after  {
+        display: block;
+        content: "＝";
+        font-size: 3em;
+        line-height: 100%;
+        width: 3em;
+        height: 3em;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .navigation-bar.fixed #toggle input:checked + span::after {
+        content: "×";
+    }
+    .navigation-bar:not(.toggled) ul li:not(:first-child) {
+        display: none;
+    }
+
+    #speakers .row {
+        display: block !important;
+    }
+    #speakers .row .row-child {
+        width: 400px;
+        margin: auto;
     }
     #speakers .row .space {
-        display: hidden !important;
+        width: 0 !important;
     }
 }

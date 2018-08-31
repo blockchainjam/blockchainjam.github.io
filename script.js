@@ -15,3 +15,11 @@ $(function () {
         }
     });
 });
+
+function onCheckChanged(arg) {
+    if (arg) {
+        $('.navigation-bar.fixed').addClass('toggled')
+    } else {
+        $('.navigation-bar.fixed').removeClass('toggled');
+    }
+}
