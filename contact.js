@@ -9,7 +9,7 @@ function postContact() {
     var url = `mailto:beny@blockchainjam.org?subject=BlockChainJamへのお問い合わせ\&body=名前：${name}%0D%0Aメール：${email}%0D%0A内容：${content}`
 
     location.href = url
-    location.href = "completed.html"
+    // location.href = "completed.html"
 }
 
 function postMediaContact() {
