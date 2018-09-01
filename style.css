@@ -163,6 +163,7 @@ body {
 #speakers .profile-image {
     height: 400px;
     width: 400px;
+    object-fit: cover;
     
 }
 #speakers .row .speaker .topic {
@@ -181,6 +182,12 @@ body {
     color: black;
     padding: 30px;
 }
+
+.icon-size {
+    width: 20px;
+    height: 20px;
+}
+
 
 .item {
     padding-bottom: 30px;
