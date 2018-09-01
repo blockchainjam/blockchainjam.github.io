@@ -160,6 +160,11 @@ body {
 #speakers .row .speaker {
     width: 400px;
 }
+#speakers .profile-image {
+    height: 400px;
+    width: 400px;
+    
+}
 #speakers .row .speaker .topic {
     font-size: 150%;
 }
