@@ -123,8 +123,28 @@ body {
     transform: translateX(-30%);
 }
 
+#abstract .concept {
+    display: flex;
+    align-items: center;
+}
+#abstract .concept::before,
+#abstract .concept::after {
+border-top: 1px solid;
+content: "";
+flex-grow: 1;
+}
+#abstract .concept:before {
+margin-right: 1rem;
+}
+#abstract .concept:after {
+margin-left: 1rem;
+}
 #abstract .concept * {
     text-align: center;
+}
+#abstract p {
+    text-align: center;
+    line-height: 200%;
 }
 
 #abstract .concept::before, .abstract .concept::after {
@@ -143,11 +163,15 @@ body {
     font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 
+#outline p {
+    margin-bottom: 20px;
+    line-height: 200%;
+}
+
 #speakers .row {
     display: flex;
     align-content: center;
     margin: 30px auto;
-    align-items: center;
 }
 #speakers .row .row-child {
     display: flex;
@@ -160,8 +184,28 @@ body {
 #speakers .row .speaker {
     width: 400px;
 }
+#speakers .profile-image {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    
+}
 #speakers .row .speaker .topic {
-    font-size: 150%;
+    height: 2.4em;
+    font-size: 2.4em;
+    line-height: 2.4em;
+    margin: 10px 0;
+}
+#speakers .row .speaker .company {
+    margin: 10px 0;
+}
+#speakers .row .speaker .name {
+    font-weight: bold;
+    font-size: 120%;
+    margin: 10px 0;
+}
+#speakers .row .speaker hr {
+    margin: 20px 0;
 }
 #speakers .row .space {
     width: 100px;
@@ -176,6 +220,12 @@ body {
     color: black;
     padding: 30px;
 }
+
+.icon-size {
+    height: 100%;
+    vertical-align: top;
+}
+
 
 .item {
     padding-bottom: 30px;
@@ -192,12 +242,14 @@ body {
     color: white;
     padding: 30px;
     margin: 0;
+    margin-bottom: 50px;
     background: linear-gradient(to right, #8cabba, #638ca5);
     font-family: "HelveticaNeue-Thin", "Helvetica Neue Thin", "Helvetica Neue", 'Heebo', "Arial", ".HiraKakuInterface-W1";
 }
 
 .item h3, .item h5 {
     text-align: center;
+    margin: 30px 0;
 }
 
 label.row {
@@ -242,7 +294,7 @@ tr > td:first-child {
     border-right: 1px solid black;
 }
 td {
-    padding: 2px;
+    padding: 10px;
     border-bottom: 1px solid black;
 }
 
@@ -261,6 +313,9 @@ button.green {
 }
 
 @media screen and (max-width: 1000px) {
+    .navigation-bar.absolute {
+        display: none;
+    }
     .navigation-bar ul {
         display: block !important;
     }

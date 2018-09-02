@@ -1,0 +1,479 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>BlockChainJam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../script.js"></script>
+    <script src="../contact.js"></script>
+</head>
+
+<body>
+    <div class="navigation-bar absolute">
+        <div class="container-1000px">
+            <ul>
+                <li class="logo">
+                    <a href="#">
+                        <img src="../images/logo-white.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#outline')">About</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#topics')">Speakers</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#information')">Information</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#access')">Access</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#contact')">Contact</a>
+                </li>
+                <li class="twitter">
+                    <a href="#">
+                        <img src="../images/twitter-white.svg" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="navigation-bar fixed hidden">
+        <div class="container-1000px">
+            <label id="toggle">
+                <input type="checkbox" onchange="onCheckChanged(this.checked)" />
+                <span></span>
+            </label>
+
+            <ul>
+                <li class="logo">
+                    <a href="#">
+                        <img src="../images/logo-black.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#outline')">About</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#speakers')">Speakers</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#information')">Information</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#access')">Access</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSelector('#contact')">Contact</a>
+                </li>
+                <li class="twitter">
+                    <a href="#">
+                        <img src="../images/twitter-black.svg" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="back1">
+        <img src="../images/en_back1.svg" />
+    </div>
+    <div id="abstract" class="display-nav">
+        <img src="../images/logo.svg" />
+        <div class="container-1000px">
+            <div class="concept">
+                <div>
+                    <h3>BlockChainJam</h3>
+                    <h4>The Day where you get to take a sneak peek into the future</h4>
+                </div>
+            </div>
+            <p>
+                "BlockChainJam" is a one-day event where you will get to know about how the emergence of blockchains is changing the world.
+                You will get to take a closer look into blockchain projects that are currently in development. It will be
+                the day where you get to take a sneak peek into the future.
+            </p>
+        </div>
+    </div>
+    <div id="back2">
+        <img src="../images/en_back2.svg" />
+    </div>
+    <div class="container-1500px">
+        <div class="item" id="outline">
+            <h4>OUTLINE</h4>
+            <div class="container-1000px">
+                <h3>
+                    Explore the potential of "blockchains" and how they can shape the future
+                </h3>
+                <p>
+                    The words such as Bitcoin and Cryptocurrency are well known. How about “Blockchain”. which is the technology that makes these
+                    innovations come to life?
+                </p>
+                <p>
+                    By participating in BlockChainJam 2018, you will get to feel and understand what Blockchains are and how they will shape
+                    the future.
+                </p>
+                <p>
+                    At BlockChainJam, you will get to listen to talks by wonderful speakers such as prominent blockchain researchers and members
+                    from the hottest Blockchain projects. They will walk you through the basics of Blockchains, what it is
+                    capable of, and how it will change our lives. They will do this in an easy-to-understand manner, so don't
+                    worry if this is your first encounter with this new technology.
+                </p>
+                <p>
+                    It will be a day where you take a sneak peek into next generation technology and what the future will look like. Don't miss
+                    this opportunity!
+                </p>
+            </div>
+        </div>
+        <div class="item" id="speakers">
+            <h4>SPEAKERS</h4>
+            <div class="container-1000px">
+                <div class="row">
+                    <div class="row-child">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/bc.svg" class="icon-size" />
+                                <span>
+                                    Blockchain
+                                </span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/oishi.jpg" />
+                            <div class="company">[Japan Digital Money Association Director]</div>
+                            <div class="name">Tetsuyuki Oishi</div>
+                            <hr />
+                            <div class="profile">
+                                Since 2013, he has been involved with bitcoin/crypto related businesses fulltime. He also runs a famous blog in which he
+                                introduces cryptocurrency technology to the masses. He is active in spreading the adoption
+                                of cryptocurrencies and fostering the technology. Board member of the Japan Digital Money
+                                Association, United Bit Coiners CSO. As an angel investor, he has invested in wallet development
+                                and cross-chain projects, among others.
+                                <br />
+                                <a href="http://www.digitalmoney.or.jp/">Japan Digital Money Association</a><br />
+                                <a href="http://doublehash.me/">ビットコイン研究所</a>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                    <div class="row-child reverse">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/zilliqa.svg" class="icon-size" />
+                                <span>Zilliqa</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/E_H_ong.jpg" />
+                            <div class="company">[Zilliqa - Head of Business Development]</div>
+                            <div class="name">En Hui Ong</div>
+                            <hr />
+                            <div class="profile">
+
+                                Graduated from Waseda University, School of International Liberal Studies in 2010. From 2011 to 2018, she was a member of
+                                the Asset Management Sales Team at BlackRock, JP Morgan. Currently, she handles Business
+                                Development at Zilliqa. CAIA certificate holder.<br />
+                                <a href="https://zilliqa.com/">Zilliqa</a>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-child">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/eth.svg" class="icon-size" />
+                                <span>Ethereum</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/sg_new.jpg" />
+                            <div class="company">[Crypto economics Lab - CTO]</div>
+                            <div class="name">Shogo Ochiai</div>
+                            <hr />
+                            <div class="profile">
+                                Blockchain engineer specializing in Ethereum, Plasma, zk-SNARKs. He collaborates with Asian regional cryptocurrency projects
+                                mainly on OSS contribution about Staking and Formal Verification essential to Cryptoeconomics
+                                which is the basis of the Ethereum development. He is really into Rust and Isabelle/HOL.<br
+                                />
+                                <a href="https://www.cryptoeconomicslab.com/">Crypto economics Lab, Inc.</a>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                    <div class="row-child reverse">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/tezos.svg" class="icon-size" />
+                                <span>Tezos</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/Auther_B.jpg" />
+                            <div class="company">[Tezos Foundation]</div>
+                            <div class="name">Ather B</div>
+                            <hr />
+                            <div class="profile">
+                                Born and raised in France, he majored in Master'sin Mathematics at New York University in 2007. After leaving Morgan Stanley
+                                in 2016 where he spent time as vice president, he now leads the Tezos project which aims
+                                to become the solution to real life issues.<br />
+                                <a href="https://tezos.com/">Tezos</a>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-child">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/cosmos.svg" class="icon-size" />
+                                <span>Cosmos</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/Christine_Chiang.jpg" />
+                            <div class="company">[Cosmos - Head of Communications]</div>
+                            <div class="name">Christina Chiang</div>
+                            <hr />
+                            <div class="profile">
+                                Head of Communications at Cosmos. She goes by the moniker Chjango Unchained. Chjango is the chief editor of the Cosmos blog
+                                and brings the creative direction behind all the video and written content from Cosmos. Namely,
+                                she writes articles breaking down technical subjects about protocols, distributed systems,
+                                and blockchain technology to broad audiences of all levels. Before Cosmos, she came from
+                                NASA's Jet Propulsion Laboratory, so she never really left space.
+                                <br　/>
+                                <a href="https://cosmos.network/">Cosmos</a>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                    <div class="row-child reverse">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/0x.svg" class="icon-size" />
+                                <span>0x</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/1VQ9.jpg" />
+                            <div class="company">[0x - Japanese Community Member]</div>
+                            <div class="name">1VQ9</div>
+                            <hr />
+                            <div class="profile">
+                                Worked as a researcher at a Japanese start-up. Since finding out about the 0x Project in 2017, he has been involved in the
+                                Japanese translation of a DEX project using 0x. He also plans to launch a 0x Japanese community.<br
+                                />
+                                <a href="https://0xproject.com/">0x</a>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-child">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/btc.svg" class="icon-size" />
+                                <span>Bitcoin</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/hyuga.jpg" />
+                            <div class="company">[Fressets, Inc. - CEO]</div>
+                            <div class="name">Rihiko Hyuga</div>
+                            <hr />
+                            <div class="profile">
+                                In April 2008, he entered the University of Tokyo, Natural Sciences. In March 2012, he graduated from the department of physics
+                                at the same university. He advanced to the master course of the Graduate School of Comprehensive
+                                Culture and obtained his master's degree from the study of thermodynamic and statistical
+                                mechanics properties of long-range interaction systems. While studying at the same doctoral
+                                degree, he met Bitcoin which gradually drew his attention to its theoretical novelty and
+                                innovation. He started the development and operation of a Monacoin (Japan's first bitcoin
+                                clone (altcoin)) exchange in January 2014, and since then has developed various other services
+                                such as a mining pool, wallet and so, all by himself. After that, with the expansion of his
+                                business, he launched Janom where he resides as the representative. Janom provides technical
+                                consulting, system development, technology offerings related to cryptocurrencies.
+                                <br />
+                                <a href="https://fressets.com/">Fressets, Inc.</a>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                    <div class="row-child reverse">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/omise.svg" class="icon-size" />
+                                <span>Omise</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/uno.jpg" />
+                            <div class="company">[Omise Japan Co.,Ltd. - Country Manager]</div>
+                            <div class="name">Masaharu Uno</div>
+                            <hr />
+                            <div class="profile">
+                                After working in the advertising industry, he joined Omise in 2015. He manages the operations of Omise Payment and OmiseGO
+                                in Japan. He also conducted research on Plasma in Japan.<br
+                                />
+                                <a href="https://omisego.network/">Omise</a>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-child">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/eng.svg" class="icon-size" />
+                                <span>Enigma</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/kana_gold_new.jpg" />
+                            <div class="company">[Enigma Ambassador]</div>
+                            <div class="name">KanaGold</div>
+                            <hr />
+                            <div class="profile">
+                                Former quant at a financial institution. Started cryptocurrency trading in July 2017. Started a blog to explain cryptocurrencies
+                                in an easy to understand way in January 2018. Official Enigma ambassador.<br
+                                />
+                                <a href="https://fressets.com/">Fressets, Inc.</a>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                    <div class="row-child reverse">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/eng.svg" class="icon-size" />
+                                <span>Enigma</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/udon.jpg" />
+                            <div class="company">[Enigma ambassador / Stir - COO]</div>
+                            <div class="name">Udon</div>
+                            <hr />
+                            <div class="profile">
+                                Non-Engineer who mainly researches and intellectualizes about the Ethereum Ecosystem. Tweets about the researches he has
+                                performed through his popular twitter account (Twitter: @udon_crypto) Attracted by the potential
+                                of Enigma, he manages EnigmaJapan and is active in the community as an Enigma Ambassador.
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-child">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/cg.svg" class="icon-size" />
+                                <span>Crypto-Tax</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/kimura.jpg" />
+                            <div class="company">[Lost Blocks, CryptoGain - CEO Kimura Certified Public Accountants - Founder
+                                Quantum Accounting Inc. - Director]</div>
+                            <div class="name">Kensaku Kimura</div>
+                            <hr />
+                            <div class="profile">
+                                Japanese CPA/USCPA. Joined KPMG in 2006 and spent 10 years working on finance and accounting related projects in Tokyo and
+                                New York. Since 2016, has been involved in various crypto related projects, including his
+                                own startups such as Lost Blocks and CryptoGain. Spends most of his weekends setting up nodes.
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                    <div class="row-child reverse">
+                        <div class="speaker">
+                            <div class="topic">
+                                <img src="../images/topics/cg.svg" class="icon-size" />
+                                <span>Crypto-Tax</span>
+                            </div>
+                            <img class="profile-image" src="../images/speakers/ido.jpg" />
+                            <div class="company">[Quantum Accounting Inc. Director]</div>
+                            <div class="name">Hironori Ido</div>
+                            <hr />
+                            <div class="profile">
+                                He graduated from Keio University, B.A. in Economics, 2006 and joined KPMG AZSA LLC in the same year. After managing audit
+                                teams of listed companies and providing IPO consulting work, he left KPMG in 2015. In the
+                                same year, he founded CPA/Tax Accountant Hironori Ido Office, and provides various services
+                                including tax reporting, business succession consultation, inheritance tax consultation,
+                                to companies and individual business owners. In recent years, he has responded to increasing
+                                requests from investors to give tax advice regarding cryptocurrencies.
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item" id="information">
+            <h4>INFORMATION</h4>
+            <h5>BlockchainJam 2018</h5>
+            <table>
+                <tr>
+                    <td>Date</td>
+                    <td>2018/10/21(Sun)</td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td>15:00～18:00</td>
+                </tr>
+                <tr>
+                    <td>VENUE</td>
+                    <td>Roppongi AcademyHills TowerHall</td>
+                </tr>
+                <tr>
+                    <td>Ticket selling date</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>Regular(10,000 yen)/Student(3,000 yen)</td>
+                </tr>
+            </table>
+            <h5 id="access">ACCESS</h5>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6719954668542!2d139.72686701525828!3d35.660452130199225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b88edeca0e1ff0e!2z44Ki44Kr44OH44Of44O844OS44Or44K6!5e0!3m2!1sja!2sjp!4v1534922949970"
+                height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <p>
+                【【Roppongi AcademyHills TowerHall】
+                <br/> Roppongi Hills Mori Tower 49F, 6-10-1 Roppongi, Minato-ku, Tokyo 106-6149
+                <br/> （Tokyo Metro Hibiya Line 3-minute walk from Exit 1C of Roppongi Stn.）
+            </p>
+        </div>
+        <div class="item">
+            <h4>SPONSORSHIP</h4>
+            <div class="container-1000px">
+                <p>
+                    We are currently looking for supporters of BlockChainJAM 2018. Please reach out to us about our sponsorship program and how
+                    you can be involved with the event using the contact form.
+                </p>
+            </div>
+        </div>
+        <div class="item" id="contact">
+            <h4>CONTACT</h4>
+            <div class="container-1000px">
+                <p>If you have any questions about the event, reach out to us using the contact form below! (Media inquiries
+                    can be sent in using the same form)</p>
+                <p>Media related inquiries can be sent in using
+                    <a href="media-contact.html">this contact form</a>
+                </p>
+
+                <form #id="contact-form" action="javascript:postContact();">
+                    <label class="row wide">
+                        <span class="dark">Name</span>
+                        <input id="name" name="name" type="text" />
+                    </label>
+                    <label class="row wide">
+                        <span class="dark">Email</span>
+                        <input id="email" name="email" type="text" />
+                    </label>
+                    <label class="row wide textarea">
+                        <span class="dark">Content</span>
+                        <textarea id="content" name="content" rows="12"></textarea>
+                    </label>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; BlockChainJam 2018 All Rights Reserved</p>
+            <p>
+                <a href="legal.html">特定商取引法に基づく表記</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
