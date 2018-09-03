@@ -110,13 +110,12 @@ a:hover {
     background: white;
     overflow: visible;
     position: relative;
-    padding: 3em;
 }
 #abstract img {
     height: 6em;
     display: block;
     position: absolute;
-    top: -6%;
+    top: -10%;
     left: 50%;
     transform: translateX(-30%);
 }
@@ -124,18 +123,13 @@ a:hover {
 #abstract .concept {
     display: flex;
     align-items: center;
+    margin: 3em 0;
 }
 #abstract .concept::before,
 #abstract .concept::after {
     border-top: 1px solid;
     content: "";
     flex-grow: 1;
-}
-#abstract .concept:before {
-    margin-right: 1rem;
-}
-#abstract .concept:after {
-    margin-left: 1rem;
 }
 #abstract .concept * {
     text-align: center;
@@ -374,6 +368,20 @@ button.green {
         margin: auto;
     }
     #speakers .row .space {
-        width: 0 !important;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #speakers .row .row-child {
+        width: 200px;
+    }
+    #speakers .row .speaker {
+        width: 200px;
+    }
+    #speakers .profile-image {
+        height: 200px;
+        width: 200px;
+        
     }
 }
