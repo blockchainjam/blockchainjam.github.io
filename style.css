@@ -256,13 +256,13 @@ a:hover {
     margin: 0;
     margin-bottom: 50px;
     background: linear-gradient(to right, #8cabba, #638ca5);
-    font-family: "Heebo:100";
+    font-family: "Heebo";
 }
 
 .item h3, .item h5 {
     text-align: center;
     margin: 30px 0;
-    font-family: "Heebo:100";
+    font-family: "Heebo";
     font-size: 120%;
 }
 
