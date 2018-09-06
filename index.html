@@ -440,18 +440,18 @@
                 <p>イベントについてのお問い合わせは<br class="sp-view" />下記フォームよりお願いいたします。<br />
 				※メディア取材のお申し込みは<a href="media-contact.html">こちら</a>
                 </p>
-                <form #id="contact-form" action="javascript:postContact();">
+                <form #id="contact-form" action="javascript:postContact(false);">
                     <label class="row wide">
                         <span class="dark">お名前</span>
-                        <input id="name" name="name" type="text" />
+                        <input id="name" name="name" type="text" required />
                     </label>
                     <label class="row wide">
                         <span class="dark">Email</span>
-                        <input id="email" name="email" type="text" />
+                        <input id="email" name="email" type="text" required />
                     </label>
                     <label class="row wide textarea">
                         <span class="dark">お問い合わせ内容</span>
-                        <textarea id="content" name="content" rows="12"></textarea>
+                        <textarea id="content" name="content" rows="12" required></textarea>
                     </label>
                     <button>送信</button>
                 </form>

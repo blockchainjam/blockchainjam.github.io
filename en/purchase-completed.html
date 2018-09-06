@@ -3,16 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>チケット購入 - BlockChainJam</title>
+    <title>購入完了 - BlockChainJam</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
     
     <link href="https://fonts.googleapis.com/css?family=Heebo:100" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-    <script type="text/javascript" src="https://js.pay.jp/"></script>
-    <script src="../purchase.js"></script>
 </head>
 
 <body>
@@ -55,38 +52,13 @@
         <div class="item">
             <h4>PURCHASING TICKET</h4>
             <div class="container-1000px">
-                <p>チケットはこちらのページでご購入いただけます。<br /> お支払方法はクレジットカードのみとなります。
+                <h5>BlockChainJamのチケットご購入、誠にありがとうございました。</h5>
+                <p> ご記入いただいたメールアドレスへ購入内容確認メールを送信しました。
+                    <br /> 当日のご来場を心よりお待ち申し上げております。
                 </p>
-                <hr />
-                <form action="javascript:purchase();">
-                    <div>
-                        チケット購入数<br />
-                        <label class="row">
-                            <span>一般(￥10,000)</span>
-                            <input type="number" min="0" name="general" id="general" placeholder="枚数" />
-                        </label>
-                        <label class="row">
-                            <span>学生(￥3,000)</span>
-                            <input type="number" min="0" name="student" id="student" placeholder="枚数" />
-                        </label>
-                    </div>
-
-                    <hr />
-                    <h5>購入者情報</h5>
-                    <div>
-                        お名前<br />
-                        <label class="row wide">
-                            <input name="name" required id="name" />
-                        </label>
-                    </div>
-                    <div>
-                        メールアドレス<br />
-                        <label class="row wide">
-                            <input type="email" required name="email" id="email" />
-                        </label>
-                    </div>
-                    <button>購入</button>
-                </form>
+                <p>
+                    <a style="text-decoration: underline;" href="/">TOPへ戻る</a>
+                </p>
             </div>
         </div>
         <div class="footer">
