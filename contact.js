@@ -1,4 +1,4 @@
-function postContact() {
+function postContact(media) {
     let result = window.confirm("お問い合わせを送信しますか？");
     if (!result) {
         return;
@@ -6,23 +6,27 @@ function postContact() {
     var name = $("#name").val()
     var email = $("#email").val()
     var content = $("#content").val()
-    var url = `mailto:beny@blockchainjam.org?subject=BlockChainJamへのお問い合わせ\&body=名前：${name}%0D%0Aメール：${email}%0D%0A内容：${content}`
+    var company = null, phone = null;
 
-    location.href = url
-    // location.href = "completed.html"
-}
-
-function postMediaContact() {
-    let result = window.confirm("お問い合わせを送信しますか？");
-    if (!result) {
-        return;
+    if(media) {
+        company = $("#company").val()
+        phone = $("#phone").val()
     }
-    var name = $("#name").val()
-    var company = $("#company").val()
-    var email = $("#email").val()
-    var phone = $("#phone").val()
-    var content = $("#content").val()
-    var url = `mailto:beny@blockchainjam.org?subject=BlockChainJamへのお問い合わせ\&body=名前：${name}%0D%0A会社名：${company}%0D%0Aメール：${email}%0D%0A電話番号：${phone}%0D%0A内容：${content}`
-    location.href = url
-    // location.href = "completed.html"
+    
+    $.post(
+        "https://us-central1-cors-215507.cloudfunctions.net/doPost",
+        {
+            url: "https://script.google.com/macros/s/AKfycbyEiG8hn86uvmVJXBGc_2s3dgYW78C_ONYZJRzqqBIqe5MgIMg/exec",
+            form: JSON.stringify({
+                name: name,
+                company: company,
+                email: email,
+                phone: phone,
+                content: content
+            })
+        },
+        () => {
+            location.href = "completed.html"
+        }
+    )
 }

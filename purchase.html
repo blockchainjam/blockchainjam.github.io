@@ -10,6 +10,9 @@
     
     <link href="https://fonts.googleapis.com/css?family=Heebo:100" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" src="https://js.pay.jp/"></script>
+    <script src="purchase.js"></script>
 </head>
 
 <body>
@@ -17,21 +20,32 @@
         <div class="container-1000px">
             <ul>
                 <li class="logo">
+                    <a href="/">
+                        <img src="images/logo-black.svg" />
+                    </a>
                 </li>
                 <li>
-                    <a href="../#outline">イベントについて</a>
+                    <a href="/#outline">イベントについて</a>
                 </li>
                 <li>
-                    <a href="../#topics">登壇者</a>
+                    <a href="/#topics">登壇者</a>
                 </li>
                 <li>
-                    <a href="../#information">イベント情報</a>
+                    <a href="/#information">イベント情報</a>
                 </li>
                 <li>
-                    <a href="../#access">アクセス</a>
+                    <a href="/#access">アクセス</a>
                 </li>
                 <li>
-                    <a href="../#contact">お問い合わせ</a>
+                    <a href="/#contact">お問い合わせ</a>
+                </li>
+                <li>
+                    <a href="/en">English</a>
+                </li>
+                <li class="twitter">
+                    <a href="https://twitter.com/bCJ2018" target="_blank">
+                        <img src="images/twitter-black.svg" />
+                    </a>
                 </li>
             </ul>
         </div>
@@ -44,64 +58,31 @@
                 <p>チケットはこちらのページでご購入いただけます。<br /> お支払方法はクレジットカードのみとなります。
                 </p>
                 <hr />
-                <form>
+                <form action="javascript:purchase();">
                     <div>
-                        チケット種類<br />
-                        <label>
-                            <input type="radio" name="ticketType" value="general" />一般(￥10,000)
+                        チケット購入数<br />
+                        <label class="row">
+                            <span>一般(￥10,000)</span>
+                            <input type="number" min="0" name="general" id="general" placeholder="枚数" />
                         </label>
-                        <label>
-                            <input type="radio" name="ticketType" value="student" />学生(￥3,000)
-                        </label>
-
-                    </div>
-                    <div>
-                        チケット購入数
-                        <label class="row wide">
-                            <input type="number" name="amount" />
-                            <span>枚</span>
+                        <label class="row">
+                            <span>学生(￥3,000)</span>
+                            <input type="number" min="0" name="student" id="student" placeholder="枚数" />
                         </label>
                     </div>
 
-                    <div>合計金額: 円</div>
                     <hr />
-                    <h5>購入者情報/支払情報の記入</h5>
+                    <h5>購入者情報</h5>
                     <div>
                         お名前<br />
                         <label class="row wide">
-                            <input name="name" />
+                            <input name="name" required id="name" />
                         </label>
                     </div>
                     <div>
                         メールアドレス<br />
                         <label class="row wide">
-                            <input type="email" name="email" />
-                        </label>
-                    </div>
-                    <div>
-                        クレジットカード番号<br />
-                        <label class="row wide">
-                            <input autocomplete="cc-number" placeholder="XXXX XXXX XXXX XXXX" />
-                        </label>
-                    </div>
-                    <div>
-                        カード名義<br />
-                        <label class="row wide">
-                            <input autocomplete="cc-name" placeholder="カードに記載されている通りにローマ字でご記入ください。" name="ccName" />
-                        </label>
-                    </div>
-                    <div>
-                        有効期限<br />
-                        <label class="row">
-                            <input type="number" autocomplete="cc-exp-month" placeholder="月" name="ccExpMonth" />
-                            <span>/</span>
-                            <input type="number" autocomplete="cc-exp-year" placeholder="年" name="" />
-                        </label>
-                    </div>
-                    <div>
-                        CVC<br />
-                        <label class="row">
-                            <input type="number" autocomplete="cc-csc" placeholder="XXX" />
+                            <input type="email" required name="email" id="email" />
                         </label>
                     </div>
                     <button>購入</button>

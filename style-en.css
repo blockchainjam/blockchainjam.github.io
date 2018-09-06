@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/*-------------------------
+	For English
+-------------------------*/
+
+body { font-family: "Heebo", sans-serif; letter-spacing: .1em;}
+
+
+#back1 { background: url(images/en_back1.svg); }
+#back2 { background: url(images/en_back2.svg); }
+#back1, #back2 {
+    background-position: center top;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    margin: 0;
+}
+#back1 img, #back2 img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+#abstract .concept h3 { font-size: 2.5em; margin: 0 80px 20px 80px; }
+#abstract .concept h4 { font-size: 1.4em; line-height: 2em;}
+#abstract p { line-height: 2.5em; font-size: 1.2em; }
+
+#outline h3 { font-family: "Lora", serif; letter-spacing: .05em; font-size: 2.1em; line-height: 2em; padding: 40px 0;}
+#outline p { font-size: 1em; }
+
+
+/*-------------------------
+	@media
+-------------------------*/
+
+@media screen and (max-width: 1000px) {
+	
+	#back1, #back2 { background: none; }
+	#back1 img, #back2 img { display: block; margin: 0; width: 100%; opacity: 1; }
+	
+	
+	/*---- Abstract (~1000px) ----*/
+	
+	#abstract p { font-size: 1.5em; }
+	#abstract img { height: 10em; top: -12%; }
+	
+	
+	/*---- Outline (~1000px) ----*/
+	
+	#outline p { font-size: 1.6em; text-align: left; line-height: 2.7em !important; }
+	
+	
+	/*---- Speakers (~1000px) ----*/
+	
+	#speakers .row .speaker .profile p { font-size: 1.6em; }
+	
+	
+	/*---- Information (~1000px) ----*/
+	
+	td { font-size: 1.6em; line-height: 2em;}
+	#information.item p { font-size: 1.7em; }
+}
+
+
+@media screen and (max-width: 420px) {
+	
+	
+	/*---- Abstract (~420px) ----*/
+	
+	#abstract img { height: 6em; top: -7%; }
+	#abstract .concept h3 { font-size: 1.6em; margin: 0 30px 20px 30px; }
+	#abstract .concept h4 { font-size: .9em; }
+	#abstract p { line-height: 2.5em; font-size: 1em; padding-top: 0; }
+	
+	
+	/*---- Outline (~420px) ----*/
+	
+	#outline h3 { font-size: 1.2em; padding: 0 0 20px; }
+	#outline p { padding: 0 5%; font-size: .9em; line-height: 2.2em !important; }
+	
+	
+	/*---- Information (~420px) ----*/
+	
+	table { width: 90%; }
+	td { font-size: .9em; line-height: 2em; padding: 0 10px;}
+	#information.item p { font-size: 1em; }
+	
+	
+	/*---- Speakers (~420px) ----*/
+	
+	#speakers .row .speaker .profile p { font-size: .8em; }
+}
+
+
+
