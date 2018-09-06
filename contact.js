@@ -3,6 +3,8 @@ function postContact(media) {
     if (!result) {
         return;
     }
+    $("#cover").addClass("show");
+
     var name = $("#name").val()
     var email = $("#email").val()
     var content = $("#content").val()
