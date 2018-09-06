@@ -14,16 +14,13 @@ function postContact(media) {
     }
     
     $.post(
-        "https://us-central1-cors-215507.cloudfunctions.net/doPost",
+        "https://us-central1-blockchainjam.cloudfunctions.net/contact",
         {
-            url: "https://script.google.com/macros/s/AKfycbyEiG8hn86uvmVJXBGc_2s3dgYW78C_ONYZJRzqqBIqe5MgIMg/exec",
-            form: JSON.stringify({
-                name: name,
-                company: company,
-                email: email,
-                phone: phone,
-                content: content
-            })
+            name: name,
+            company: company,
+            email: email,
+            phone: phone,
+            content: content
         },
         () => {
             location.href = "completed.html"
