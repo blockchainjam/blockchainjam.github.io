@@ -11,10 +11,10 @@ $(function() {
         $("#studentPurchased").html(data.student);
 
         if(data.general >= generalLimit) {
-            $("#general").setAttribute("readonly", "true");
+            $("#general").attr("readonly", "true");
         }
         if(data.student >= studentLimit) {
-            $("#student").setAttribute("readonly", "true");
+            $("#student").attr("readonly", "true");
         }
     })
 
@@ -110,8 +110,12 @@ async function purchase() {
             ).done(() => {
                 result.complete("success");
                 location.href = "purchase-completed.html";
-            })
-
+            }).fail(() => {
+                result.complete("fail");
+                window.alert("エラーが発生しました。こちらからご連絡を差し上げますので少々お待ちください。")
+                return;
+            });
+            
         }
         result.complete("fail");
     });
