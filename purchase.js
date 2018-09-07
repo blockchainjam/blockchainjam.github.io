@@ -1,3 +1,25 @@
+const generalLimit = 80;
+const studentLimit = 20;
+
+$(function() {
+    $.get(
+        "https://us-central1-blockchainjam.cloudfunctions.net/status"
+    ).done((data) => {
+        data = JSON.parse(data);
+        console.log(data);
+        $("#generalPurchased").html(data.general);
+        $("#studentPurchased").html(data.student);
+
+        if(data.general >= generalLimit) {
+            $("#general").setAttribute("readonly", "true");
+        }
+        if(data.student >= studentLimit) {
+            $("#student").setAttribute("readonly", "true");
+        }
+    })
+
+})
+
 async function purchase() {
     if (!window.PaymentRequest) {
         window.alert("PaymentRequestAPIに対応したブラウザをお使いください。")
@@ -15,6 +37,17 @@ async function purchase() {
 
     var general = Number($("#general").val());
     var student = Number($("#student").val());
+
+    if(Number($("#generalPurchased").val()) + general > generalLimit) {
+        window.alert("定員を超えています。")
+        return;
+    }
+
+    if(Number($("#studentPurchased").val()) + student > studentLimit) {
+        window.alert("定員を超えています。")
+        return;
+    }
+
     var price = 10000 * general + 3000 * student;
 
     let details = {
@@ -72,10 +105,12 @@ async function purchase() {
                     token: response.id
                 },
                 () => {
-                    result.complete("success");
-                    location.href = "purchase-completed.html";
+                    
                 }
-            );
+            ).done(() => {
+                result.complete("success");
+                location.href = "purchase-completed.html";
+            })
 
         }
         result.complete("fail");

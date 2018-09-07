@@ -55,7 +55,7 @@
         <div class="item">
             <h4>PURCHASING TICKET</h4>
             <div class="container-1000px">
-                <p>チケットはこちらのページでご購入いただけます。<br /> お支払方法はクレジットカードのみとなります。
+                <p>チケットはこちらのページでご購入いただけます。<br /> お支払方法はクレジットカード[Visa/Master]のみとなります。<br />ブラウザのダイアログでクレジットカード情報を入力いただきます。
                 </p>
                 <hr />
                 <form action="javascript:purchase();">
@@ -64,11 +64,22 @@
                         <label class="row">
                             <span>一般(￥10,000)</span>
                             <input type="number" min="0" name="general" id="general" placeholder="枚数" />
+                            
                         </label>
                         <label class="row">
                             <span>学生(￥3,000)</span>
                             <input type="number" min="0" name="student" id="student" placeholder="枚数" />
+                            
                         </label>
+                    </div>
+                    <div>
+                        定員<br />
+                        一般
+                        <span id="generalPurchased"></span>
+                        <span>/80</span>
+                        学生
+                        <span id="studentPurchased"></span>
+                        <span>/20</span>
                     </div>
 
                     <hr />
