@@ -103,19 +103,16 @@ async function purchase() {
                     general: general,
                     student: student,
                     token: response.id
-                },
-                () => {
-                    
                 }
             ).done(() => {
                 result.complete("success");
                 location.href = "purchase-completed.html";
+                return;
             }).fail(() => {
                 result.complete("fail");
                 window.alert("エラーが発生しました。こちらからご連絡を差し上げますので少々お待ちください。")
                 return;
             });
-            
         }
         result.complete("fail");
     });
