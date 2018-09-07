@@ -113,7 +113,8 @@ async function purchase() {
                 window.alert("エラーが発生しました。こちらからご連絡を差し上げますので少々お待ちください。")
                 return;
             });
+        } else {
+            result.complete("fail");
         }
-        result.complete("fail");
     });
 }
