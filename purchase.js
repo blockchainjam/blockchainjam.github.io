@@ -50,6 +50,9 @@ async function purchase() {
         return;
     }
 
+    var name = $("#name").val();
+    var email = $("#email").val();
+
     Payjp.setPublicKey("pk_test_9bd57d50c30ed9d2ec978af1");
     Payjp.createToken({
         number: result.details.cardNumber,
@@ -58,11 +61,12 @@ async function purchase() {
         exp_year: result.details.expiryYear
     }, (status, response) => {
         if (status == 200) {
+            console.log(response.id);
             $.post(
                 "https://us-central1-blockchainjam.cloudfunctions.net/purchase",
                 {
-                    name: $("#name").val(),
-                    email: $("#email").val(),
+                    name: name,
+                    email: email,
                     general: general,
                     student: student,
                     token: response.id
