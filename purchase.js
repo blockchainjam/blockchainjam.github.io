@@ -18,11 +18,14 @@ $(function() {
         }
     })
 
+    if (!window.PaymentRequest) {
+        $("#purchaseForm").hide();
+        $("#ifPaymentInvalid").show();
+    }
 })
 
 async function purchase() {
     if (!window.PaymentRequest) {
-        window.alert("PaymentRequestAPIに対応したブラウザをお使いください。")
         return;
     }
     let supportedInstruments = [{
