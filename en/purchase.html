@@ -60,7 +60,7 @@
                     <br /> ブラウザのダイアログでクレジットカード情報を入力いただきます。
                 </p>
                 <hr />
-                <form action="javascript:purchase();" id="purchaseForm">
+                <form action="javascript:purchase();">
                     <div>
                         チケット購入数<br />
                         <label class="row">
@@ -96,12 +96,36 @@
                             <input type="email" required name="email" id="email" />
                         </label>
                     </div>
+                    <div id="ifPaymentInvalid">
+                        <div>
+                            カード番号<br />
+                            <label class="row wide">
+                                <input type="number" minlength="16" maxlength="16" autocomplete="cc-number" name="ccNumber" id="ccNumber" />
+                            </label>
+                        </div>
+                        <div>
+                            カード名義<br />
+                            <label class="row wide">
+                                <input autocomplete="cc-name" name="ccName" id="ccName" />
+                            </label>
+                        </div>
+                        <div>
+                            CVC<br />
+                            <label class="row wide">
+                                <input type="number" minlength="3" maxlength="3" autocomplete="cc-csc" name="ccCsc" id="ccCsc" />
+                            </label>
+                        </div>
+                        <div>
+                            有効期限<br />
+                            <label class="row wide">
+                                <input type="number" minlength="2" maxlength="2" autocomplete="cc-exp-month" name="ccExpMonth" id="ccExpMonth" />
+                                <span>/</span>
+                                <input type="number" minlength="4" maxlength="4" autocomplete="cc-exp-year" name="ccExpYear" id="ccExpYear" />
+                            </label>
+                        </div>
+                    </div>
                     <button>購入</button>
                 </form>
-                <p id="ifPaymentInvalid">
-                    お使いのブラウザはPaymentRequestAPIに対応しておりません。<br /> 対応ブラウザをお使いください。
-                    <br /> Google ChromeはすべてのOSで対応しております。
-                </p>
             </div>
         </div>
         <div class="footer">
