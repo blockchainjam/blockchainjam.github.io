@@ -24,16 +24,14 @@ $(function () {
 
     if (userAgent.indexOf('msie') != -1 ||
         userAgent.indexOf('trident') != -1) {
-            isInvalid = true;
     } else if (userAgent.indexOf('edge') != -1) {
+        isInvalid = false;
     } else if (userAgent.indexOf('chrome') != -1) {
+        isInvalid = false;
     } else if (userAgent.indexOf('safari') != -1) {
-        isInvalid = true;
     } else if (userAgent.indexOf('firefox') != -1) {
-        isInvalid = true;
     } else if (userAgent.indexOf('opera') != -1) {
     } else {
-        isInvalid = true;
     }
 
     if (!isInvalid) {
