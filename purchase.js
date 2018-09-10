@@ -1,5 +1,5 @@
-const generalLimit = 80;
-const studentLimit = 20;
+const generalLimit = 270;
+const studentLimit = 30;
 
 var isInvalid = true;
 
@@ -67,7 +67,7 @@ async function purchase() {
         return;
     }
 
-    var price = 10000 * general + 3000 * student;
+    var price = 9000 * general + 3000 * student;
 
     var arg, result;
 
@@ -88,7 +88,7 @@ async function purchase() {
                     label: `一般: 10000x ${general}`,
                     amount: {
                         currency: "JPY",
-                        value: (general * 10000).toString()
+                        value: (general * 9000).toString()
                     }
                 },
                 {
