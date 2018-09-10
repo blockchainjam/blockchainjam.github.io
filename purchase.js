@@ -1,6 +1,8 @@
 const generalLimit = 80;
 const studentLimit = 20;
 
+var isInvalid = true;
+
 $(function () {
     $.get(
         "https://us-central1-blockchainjam.cloudfunctions.net/status"
@@ -18,7 +20,23 @@ $(function () {
         }
     })
 
-    if (window.navigator.userAgent.toLowerCase().indexOf('chrome') != -1) {
+    var userAgent = window.navigator.userAgent.toLowerCase();
+
+    if (userAgent.indexOf('msie') != -1 ||
+        userAgent.indexOf('trident') != -1) {
+            isInvalid = true;
+    } else if (userAgent.indexOf('edge') != -1) {
+    } else if (userAgent.indexOf('chrome') != -1) {
+    } else if (userAgent.indexOf('safari') != -1) {
+        isInvalid = true;
+    } else if (userAgent.indexOf('firefox') != -1) {
+        isInvalid = true;
+    } else if (userAgent.indexOf('opera') != -1) {
+    } else {
+        isInvalid = true;
+    }
+
+    if (!isInvalid) {
         $("#ifPaymentInvalid").addClass("hide");
     } else {
         $("#ccName").attr("required", "true");
@@ -47,7 +65,7 @@ async function purchase() {
 
     var arg, result;
 
-    if (window.navigator.userAgent.toLowerCase().indexOf('chrome') != -1) {
+    if (!isInvalid) {
         let supportedInstruments = [{
             supportedMethods: ['basic-card'],
             data: {
@@ -96,9 +114,9 @@ async function purchase() {
             cvc: result.details.cardSecurityCode,
             exp_month: result.details.expiryMonth,
             exp_year: result.details.expiryYear
-        };console.log(arg)
+        }; console.log(arg)
     } else {
-        if(!window.confirm(`購入しますか？合計${price}円`)) {
+        if (!window.confirm(`購入しますか？合計${price}円`)) {
             return;
         }
 
