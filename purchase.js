@@ -18,11 +18,8 @@ $(function () {
         }
     })
 
-    var userAgent = window.navigator.userAgent.toLowerCase();
-    var disable = userAgent.indexOf('safari') != -1 || userAgent.indexOf('firefox') != -1 || userAgent.indexOf('msie') != -1;
-
-    if (disable) {
-        $("#ifPaymentInvalid").hide();
+    if (window.PaymentRequest) {
+        $("#ifPaymentInvalid").addClass("hide");
     } else {
         $("#ccName").attr("required", "true");
         $("#ccNumber").attr("required", "true");
