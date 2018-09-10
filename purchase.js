@@ -18,7 +18,7 @@ $(function () {
         }
     })
 
-    if (window.PaymentRequest) {
+    if (window.navigator.userAgent.toLowerCase().indexOf('chrome') != -1) {
         $("#ifPaymentInvalid").addClass("hide");
     } else {
         $("#ccName").attr("required", "true");
@@ -47,7 +47,7 @@ async function purchase() {
 
     var arg, result;
 
-    if (window.PaymentRequest) {
+    if (window.navigator.userAgent.toLowerCase().indexOf('chrome') != -1) {
         let supportedInstruments = [{
             supportedMethods: ['basic-card'],
             data: {
