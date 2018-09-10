@@ -18,8 +18,9 @@ $(function () {
         }
     })
 
-    if (!window.PaymentRequest) {
-        $("#ifPaymentInvalid").show();
+    if (window.PaymentRequest) {
+        $("#ifPaymentInvalid").hide();
+    } else {
         $("#ccName").attr("required", "true");
         $("#ccNumber").attr("required", "true");
         $("#ccExpMonth").attr("required", "true");

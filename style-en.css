@@ -102,7 +102,3 @@ body { font-family: "Heebo", sans-serif; letter-spacing: .1em;}
     background: rgba(255, 255, 255, 0.5);
     z-index: 100;
 }
-
-#ifPaymentInvalid {
-    display: none;
-}
