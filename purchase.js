@@ -21,7 +21,7 @@ $(function () {
     var userAgent = window.navigator.userAgent.toLowerCase();
     var disable = userAgent.indexOf('safari') != -1 || userAgent.indexOf('firefox') != -1 || userAgent.indexOf('msie') != -1;
 
-    if (!disable) {
+    if (disable) {
         $("#ifPaymentInvalid").hide();
     } else {
         $("#ccName").attr("required", "true");
