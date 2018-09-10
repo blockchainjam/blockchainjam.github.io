@@ -96,11 +96,17 @@
                             <input type="email" required name="email" id="email" />
                         </label>
                     </div>
+                    <div>
+                        メールアドレス確認<br />
+                        <label class="row wide">
+                            <input type="email" required name="emailConfirm" id="emailConfirm" onblur="confirmEmail()" />
+                        </label>
+                    </div>
                     <div id="ifPaymentInvalid">
                         <div>
                             カード番号<br />
                             <label class="row wide">
-                                <input type="number" minlength="16" maxlength="16" autocomplete="cc-number" name="ccNumber" id="ccNumber"/>
+                                <input pattern="[1-9][0-9]*" minlength="16" maxlength="16" autocomplete="cc-number" name="ccNumber" id="ccNumber"/>
                             </label>
                         </div>
                         <div>
@@ -112,15 +118,15 @@
                         <div>
                             CVC<br />
                             <label class="row wide">
-                                <input type="number" minlength="3" maxlength="3" autocomplete="cc-csc" name="ccCsc" id="ccCsc" />
+                                <input pattern="[1-9][0-9]*" minlength="3" maxlength="3" autocomplete="cc-csc" name="ccCsc" id="ccCsc" />
                             </label>
                         </div>
                         <div>
                             有効期限<br />
                             <label class="row wide">
-                                <input type="number" minlength="2" maxlength="2" autocomplete="cc-exp-month" name="ccExpMonth" id="ccExpMonth" />
+                                <input pattern="[1-9][0-9]*" minlength="2" maxlength="2" autocomplete="cc-exp-month" name="ccExpMonth" id="ccExpMonth" />
                                 <span>/</span>
-                                <input type="number" minlength="4" maxlength="4" autocomplete="cc-exp-year" name="ccExpYear" id="ccExpYear" />
+                                <input pattern="[1-9][0-9]*" minlength="4" maxlength="4" autocomplete="cc-exp-year" name="ccExpYear" id="ccExpYear" />
                             </label>
                         </div>
                     </div>
