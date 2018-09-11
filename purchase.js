@@ -122,7 +122,7 @@ async function purchase() {
             exp_year: result.details.expiryYear
         }; console.log(arg)
     } else {
-        if (!window.confirm(`購入しますか？購入処理中にボタンを連打されますと二重支払いが起こる可能性があるため、おやめください。合計${price}円`)) {
+        if (!window.confirm(`購入しますか？合計${price}円\n(購入処理中にボタンを連打されますと二重支払いが起こる可能性があるため、おやめください。)`)) {
             return;
         }
 
@@ -158,7 +158,9 @@ async function purchase() {
                     }
                     location.href = "purchase-completed.html";
                     return;
-                });
+                }).fail(() => {
+                    throw Error();
+                })
             } catch {
                 if (result) {
                     result.complete("fail");
