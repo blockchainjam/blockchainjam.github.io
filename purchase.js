@@ -54,97 +54,95 @@ function confirmEmail() {
 }
 
 async function purchase() {
-    $("#cover").addClass("show");
-    try {
-        var general = Number($("#general").val());
-        var student = Number($("#student").val());
+    var general = Number($("#general").val());
+    var student = Number($("#student").val());
 
-        if (Number($("#generalPurchased").val()) + general > generalLimit) {
-            window.alert("定員を超えています。")
-            return;
-        }
+    if (Number($("#generalPurchased").val()) + general > generalLimit) {
+        window.alert("定員を超えています。")
+        return;
+    }
 
-        if (Number($("#studentPurchased").val()) + student > studentLimit) {
-            window.alert("定員を超えています。")
-            return;
-        }
+    if (Number($("#studentPurchased").val()) + student > studentLimit) {
+        window.alert("定員を超えています。")
+        return;
+    }
 
-        var price = 9000 * general + 3000 * student;
+    var price = 9000 * general + 3000 * student;
 
-        var arg, result;
+    var arg, result;
 
-        if (!isInvalid) {
-            let supportedInstruments = [{
-                supportedMethods: ['basic-card'],
-                data: {
-                    supportedNetworks: [
-                        'visa',
-                        'mastercard'
-                    ]
-                }
-            }];
+    if (!isInvalid) {
+        let supportedInstruments = [{
+            supportedMethods: ['basic-card'],
+            data: {
+                supportedNetworks: [
+                    'visa',
+                    'mastercard'
+                ]
+            }
+        }];
 
-            let details = {
-                displayItems: [
-                    {
-                        label: `一般: 10000x ${general}`,
-                        amount: {
-                            currency: "JPY",
-                            value: (general * 9000).toString()
-                        }
-                    },
-                    {
-                        label: `学生: 3000x ${student}`,
-                        amount: {
-                            currency: "JPY",
-                            value: (student * 3000).toString()
-                        }
-                    }
-                ],
-                total: {
-                    label: "合計",
+        let details = {
+            displayItems: [
+                {
+                    label: `一般: 9000x ${general}`,
                     amount: {
                         currency: "JPY",
-                        value: price.toString()
+                        value: (general * 9000).toString()
+                    }
+                },
+                {
+                    label: `学生: 3000x ${student}`,
+                    amount: {
+                        currency: "JPY",
+                        value: (student * 3000).toString()
                     }
                 }
-            };
-
-            let request = new PaymentRequest(supportedInstruments, details, { requestShipping: false });
-
-            result = await request.show();
-            if (!result) {
-                return;
+            ],
+            total: {
+                label: "合計",
+                amount: {
+                    currency: "JPY",
+                    value: price.toString()
+                }
             }
+        };
 
-            arg = {
-                number: result.details.cardNumber,
-                cvc: result.details.cardSecurityCode,
-                exp_month: result.details.expiryMonth,
-                exp_year: result.details.expiryYear
-            }; console.log(arg)
-        } else {
-            if (!window.confirm(`購入しますか？合計${price}円`)) {
-                return;
-            }
+        let request = new PaymentRequest(supportedInstruments, details, { requestShipping: false });
 
+        result = await request.show();
+        if (!result) {
+            return;
+        }
 
-            arg = {
-                number: $("#ccNumber").val(),
-                cvc: $("#ccCsc").val(),
-                exp_month: $("#ccExpMonth").val(),
-                exp_year: $("#ccExpYear").val()
-            };
+        arg = {
+            number: result.details.cardNumber,
+            cvc: result.details.cardSecurityCode,
+            exp_month: result.details.expiryMonth,
+            exp_year: result.details.expiryYear
+        }; console.log(arg)
+    } else {
+        if (!window.confirm(`購入しますか？購入処理中にボタンを連打されますと二重支払いが起こる可能性があるため、おやめください。合計${price}円`)) {
+            return;
         }
 
 
-        var name = $("#name").val();
-        var email = $("#email").val();
+        arg = {
+            number: $("#ccNumber").val(),
+            cvc: $("#ccCsc").val(),
+            exp_month: $("#ccExpMonth").val(),
+            exp_year: $("#ccExpYear").val()
+        };
+    }
+    $("#cover").addClass("show");
 
-        Payjp.setPublicKey("pk_test_9bd57d50c30ed9d2ec978af1");
-        Payjp.createToken(arg, (status, response) => {
-            if (status == 200) {
-                console.log(response.id);
+    var name = $("#name").val();
+    var email = $("#email").val();
+
+    Payjp.setPublicKey("pk_test_9bd57d50c30ed9d2ec978af1");
+    Payjp.createToken(arg, (status, response) => {
+        if (status == 200) {
+            try {
                 $.post(
                     "https://us-central1-blockchainjam.cloudfunctions.net/purchase",
                     {
@@ -160,24 +158,23 @@ async function purchase() {
                     }
                     location.href = "purchase-completed.html";
                     return;
-                }).fail(() => {
-                    if (result) {
-                        result.complete("fail");
-                    }
-                    window.alert("エラーが発生しました。運営までお問い合わせください")
-                    return;
                 });
-            } else {
+            } catch {
                 if (result) {
                     result.complete("fail");
                 } else {
                     window.alert("エラーが発生しました。")
                 }
+                $("#cover").removeClass("show");
             }
-        });
-    } catch (e) {
-        throw (e.message);
-    } finally {
-        $("#cover").removeClass("show");
+        } else {
+            if (result) {
+                result.complete("fail");
+            } else {
+                window.alert("エラーが発生しました。")
+            }
+            $("#cover").removeClass("show");
+        }
     }
+    });
 }
