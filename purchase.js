@@ -175,6 +175,5 @@ async function purchase() {
             }
             $("#cover").removeClass("show");
         }
-    }
     });
 }
