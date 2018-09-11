@@ -2,6 +2,16 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125632119-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125632119-1');
+    </script>
+
     <meta charset="utf-8" />
     <title>チケット購入 - BlockChainJam</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -106,7 +116,7 @@
                         <div>
                             カード番号<br />
                             <label class="row wide">
-                                <input pattern="[0-9]*" minlength="16" maxlength="16" autocomplete="cc-number" name="ccNumber" id="ccNumber"/>
+                                <input pattern="[0-9]*" minlength="16" maxlength="16" autocomplete="cc-number" name="ccNumber" id="ccNumber" />
                             </label>
                         </div>
                         <div>
@@ -124,11 +134,13 @@
                         <div>
                             有効期限<br />
                             <label class="row">
-                                <input pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="cc-exp-month" name="ccExpMonth" id="ccExpMonth" placeholder="月(2桁)" />
-                                
+                                <input pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="cc-exp-month" name="ccExpMonth" id="ccExpMonth" placeholder="月(2桁)"
+                                />
+
                             </label>
                             <label class="row">
-                                <input pattern="[0-9]*" minlength="4" maxlength="4" autocomplete="cc-exp-year" name="ccExpYear" id="ccExpYear" placeholder="年(4桁)" />
+                                <input pattern="[0-9]*" minlength="4" maxlength="4" autocomplete="cc-exp-year" name="ccExpYear" id="ccExpYear" placeholder="年(4桁)"
+                                />
                             </label>
                         </div>
                     </div>
