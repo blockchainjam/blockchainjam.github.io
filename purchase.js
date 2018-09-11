@@ -142,38 +142,33 @@ async function purchase() {
     Payjp.setPublicKey("pk_test_9bd57d50c30ed9d2ec978af1");
     Payjp.createToken(arg, (status, response) => {
         if (status == 200) {
-            try {
-                $.post(
-                    "https://us-central1-blockchainjam.cloudfunctions.net/purchase",
-                    {
-                        name: name,
-                        email: email,
-                        general: general,
-                        student: student,
-                        token: response.id
-                    }
-                ).done(() => {
-                    if (result) {
-                        result.complete("success");
-                    }
-                    location.href = "purchase-completed.html";
-                    return;
-                }).fail(() => {
-                    throw Error();
-                })
-            } catch {
+            $.post(
+                "https://us-central1-blockchainjam.cloudfunctions.net/purchase",
+                {
+                    name: name,
+                    email: email,
+                    general: general,
+                    student: student,
+                    token: response.id
+                }
+            ).done(() => {
+                if (result) {
+                    result.complete("success");
+                }
+                location.href = "purchase-completed.html";
+            }).fail((data, status, jqXHR) => {
                 if (result) {
                     result.complete("fail");
                 } else {
-                    window.alert("エラーが発生しました。")
+                    window.alert("エラーが発生しました。" + JSON.stringify(data))
                 }
                 $("#cover").removeClass("show");
-            }
+            })
         } else {
             if (result) {
                 result.complete("fail");
             } else {
-                window.alert("エラーが発生しました。")
+                window.alert("エラーが発生しました。クレジットカードのトークンを取得できませんでした。")
             }
             $("#cover").removeClass("show");
         }
