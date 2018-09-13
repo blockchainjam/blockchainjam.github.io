@@ -134,7 +134,7 @@ async function purchase() {
             exp_year: result.details.expiryYear
         }; console.log(arg)
     } else {
-        if (!window.confirm(`購入しますか？合計${price}円\n(購入処理中にボタンを連打されますと二重支払いが起こる可能性があるため、おやめください。)`)) {
+        if (!window.confirm(`購入しますか？合計${price}円\n(購入処理中にホダンを連打されますと二重支払いが起こる可能性があるため、OKを押したらしばらくお待ちください)`)) {
             return;
         }
 
@@ -151,7 +151,8 @@ async function purchase() {
     var name = $("#name").val();
     var email = $("#email").val();
 
-    Payjp.setPublicKey("pk_test_9bd57d50c30ed9d2ec978af1");
+    var publicKey = "pk_test_9bd57d50c30ed9d2ec978af1";
+    Payjp.setPublicKey(publicKey);
     Payjp.createToken(arg, (status, response) => {
         if (status == 200) {
             $.post(
