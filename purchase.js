@@ -151,7 +151,7 @@ async function purchase() {
     var name = $("#name").val();
     var email = $("#email").val();
 
-    var publicKey = "pk_test_9bd57d50c30ed9d2ec978af1";
+    var publicKey = "pk_live_5fc18abd168786daccb895b2"/*"pk_test_9bd57d50c30ed9d2ec978af1"*/;
     Payjp.setPublicKey(publicKey);
     Payjp.createToken(arg, (status, response) => {
         if (status == 200) {
