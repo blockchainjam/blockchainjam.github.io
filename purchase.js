@@ -57,6 +57,18 @@ async function purchase() {
     var general = Number($("#general").val());
     var student = Number($("#student").val());
 
+    if(isNaN(general)) {
+        general = 0;
+    }
+    if(isNaN(student)) {
+        student = 0;
+    }
+
+    if(!general && !student) {
+        window.alert("購入数を入力してください。")
+        return;
+    }
+
     if (Number($("#generalPurchased").val()) + general > generalLimit) {
         window.alert("定員を超えています。")
         return;
