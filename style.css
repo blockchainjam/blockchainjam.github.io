@@ -130,6 +130,29 @@ button:hover {
     height: 1em;
 }
 
+.navigation-bar ul li.purchase a {
+    color: rgb(13, 70, 125);
+    background: white;
+    font-weight: bold;
+}
+.navigation-bar.fixed ul li.purchase a {
+    color: white;
+    background: rgb(13, 70, 125);
+}
+.purchase-button {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4em;
+    font-size: 2em;
+    line-height: 4em;
+    text-align: center;
+    color: white;
+    background: rgb(13, 70, 125);
+}
+
 
 /*-------------------------
 	Background Image
@@ -529,6 +552,10 @@ button.green {
         top: 1%;
     }
     .navigation-bar:not(.toggled) ul li:not(:first-child) { display: none; }
+
+    .purchase-button {
+        display: block;
+    }
 	
 	
 	/*---- Outline (~1000px) ----*/
