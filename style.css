@@ -699,3 +699,7 @@ button.green {
 #ifPaymentInvalid.hide {
     display: none;
 }
+
+.twitter-timeline {
+    max-width: 1000px !important;
+}
