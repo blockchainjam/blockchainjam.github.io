@@ -130,14 +130,25 @@ button:hover {
     height: 1em;
 }
 
-.navigation-bar ul li.purchase a {
+.navigation-bar .purchase a {
     color: rgb(13, 70, 125);
     background: white;
-    font-weight: bold;
+    /*font-weight: bold;*/
+	display: block;
+    position: absolute;
+	z-index: 2;
+	box-sizing: border-box;
+	height: 100%;
+	padding: 30px;
+	right: 0;
+	top: 0;
+	font-size: .95em;
 }
-.navigation-bar.fixed ul li.purchase a {
+.navigation-bar.fixed .purchase a,
+.navigation-bar .purchase.blue a{
     color: white;
     background: rgb(13, 70, 125);
+	z-index: 2;
 }
 .purchase-button {
     display: none;
@@ -145,9 +156,9 @@ button:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 2em;
-    font-size: 1.5em;
-    line-height: 2em;
+    height: 2.3em;
+	padding: 1em 0 0;
+    font-size: 2em;
     text-align: center;
     color: white;
     background: rgb(13, 70, 125);
@@ -358,6 +369,16 @@ td {
     padding: 30px 20px;
     border-bottom: 1px solid #444;
     font-size: 1.1em;
+	line-height: 1.7em;
+}
+
+td .note {
+	font-size: 0.75em
+}
+
+.twitter-timeline-container {
+	width: 500px;
+	margin: 0 auto 50px;
 }
 
 #information iframe {
@@ -499,9 +520,17 @@ button.green {
 	@media
 -------------------------*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+	.navigation-bar .purchase a {
+		right: 0;
+		top: 75px;
+		font-size: .95em;
+	}
+}
+
+@media screen and (max-width: 1024px) {
 	
-	.pc-view {display: none;}
+	.pc-view, .purchase {display: none;}
 	.sp-view {display: block;}
 	
 	.container-1000px { width: 85%; margin: 0 auto; }
@@ -587,6 +616,7 @@ button.green {
 	
 	td { font-size: 1.5em; }
 	#information.item p { font-size: 1.7em; }
+	.twitter-timeline-container { width: 80%; margin: 0 auto 50px; }
 	
 	
 	/*---- Sponsorship (~1000px) ----*/
@@ -617,6 +647,7 @@ button.green {
         top: 1%;
     }
 	
+	.purchase-button { height: 2em; padding: 1em 0 0; font-size: 1.3em; }
 	
 	/*---- Abstract (~420px) ----*/
 	
@@ -700,6 +731,6 @@ button.green {
     display: none;
 }
 
-.twitter-timeline {
+/*.twitter-timeline {
     max-width: 1000px !important;
-}
+}*/
