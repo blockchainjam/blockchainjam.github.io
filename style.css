@@ -311,17 +311,19 @@ button:hover {
 }
 
 #speakers .row .speaker .topic {
-    height: 1.3em;
-    margin: 0 0 20px;
     font-size: 2.4em;
-    /*line-height: 2.4em;*/
     font-family: "Heebo";
-	letter-spacing: .12em;
+  letter-spacing: .12em;
+  display: flex;
+  flex-flow: row wrap;
 }
-.icon-size {
-    height: 100%;
+#speakers .row .speaker .topic .icon-size {
+    height: 1.2em;
 	vertical-align: middle;
 	padding: 0 5px 0 0;
+}
+#speakers .row .speaker .topic span {
+  display: block;
 }
 #speakers .row .speaker .company {
     margin: 30px 0 20px;
@@ -564,7 +566,7 @@ button.green {
     .navigation-bar.fixed #toggle input { display: none; }
     .navigation-bar.fixed #toggle input + span::after  {
         display: block;
-        content: "=";
+        content: "＝";
         font-size: 6em;
 		color: #777;
         line-height: 100%;
