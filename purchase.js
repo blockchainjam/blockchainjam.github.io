@@ -45,14 +45,6 @@ $(function () {
     }
 })
 
-function confirmEmail() {
-    var email = $("#email").val();
-    var confemail = $("#emailConfirm").val();
-    if (email != confemail) {
-        alert('メールアドレスが一致しません。');
-    }
-}
-
 async function purchase() {
     var general = Number($("#general").val());
     var student = Number($("#student").val());
