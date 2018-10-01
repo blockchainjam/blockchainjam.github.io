@@ -65,16 +65,60 @@
     <div class="item">
       <h4>PURCHASING TICKET</h4>
       <div class="container-1000px">
-        <p>
-          チケットはこちらのページでご購入いただけます。<br /> お支払方法はクレジットカード[Visa/Master]のみとなります。
-        </p>
-        <hr />
-        <form action="javascript:purchase();">
+        <h5>チケット購入方法の選択</h5>
+        <p>BlockChainJam2018のチケットは2種類の方法によりお買い求めいただけます。</p>
+        <div class="ticket-method">
           <div>
-            チケット購入数<br />
+            <div class="radius-rectangle">
+              <div style="background: url(images/ticket-p2p.svg);"></div>
+              <a href="#ticket-p2p">Ticket Peer to Peerで購入</a>
+            </div>
+          </div>
+          <div>
+            <h5>ブロックチェーンを使ったチケットシステム</h5>
+            <p>
+              当イベントが、こちらのシステムを使ってチケットを購入できる初めてのイベントとなります！<br />
+              ブロックチェーンでしかできないことを実現させているチケットシステムです。詳しくは<a>こちら</a>
+            </p>
+            <p>
+              【お支払方法】
+              <br />
+              クレジットカード[Visa/Master]
+            </p>
+          </div>
+        </div>
+        <div class="ticket-method">
+          <div>
+            <div class="radius-rectangle">
+              <div style="background: url(images/peatix.svg);"></div>
+              <a href="https://blockchainjam2018.peatix.com/" target="_blank">Peatixで購入</a>
+            </div>
+          </div>
+          <div>
+            <h5>Peatix</h5>
+            <p>
+              Peatixアカウントをお持ちの方、クレジットカード（Visa/Master） 以 外での決済をご希望の方はPeatixにてチケットをお買い求めくださ い。
+            </p>
+            <p>
+              【お支払方法】
+              <br />クレジットカード[Visa/Master/JCB/Amex/Diners]
+              <br />
+              コンビニ決済
+              <br />
+              銀行ATM
+            </p>
+          </div>
+        </div>
+        <hr />
+        <p id="ticket-p2p">
+          ちけっとピアツーピアは、こちらでお買い求めいただけます。
+        </p>
+        <form action="javascript:purchase();">
+          <h6>チケット購入数</h6>
+          <div>
             <label class="row">
               <span>一般(￥9,000)</span>
-              <input type="number" min="0" name="general" id="general" placeholder="枚数" value="1" />
+              <input type="number" min="0" name="general" id="general" placeholder="枚数" />
             </label>
             <label class="row">
               <span>学生(￥3,000)</span>
@@ -91,8 +135,7 @@
             <span>/30</span>
           </div>
 
-          <hr />
-          <h5>購入者情報</h5>
+          <h6>購入者情報</h6>
           <div>
             お名前<br />
             <label class="row wide">
@@ -100,14 +143,14 @@
             </label>
           </div>
           <div>
-            メールアドレス<br />
+            メールアドレス(チケット送付に使います)<br />
             <label class="row wide">
               <input type="email" required name="email" id="email" />
             </label>
           </div>
           <div id="ifPaymentInvalid">
             <div>
-              カード番号(スペースハイフンなし))<br />
+              カード番号(スペースハイフンなし)<br />
               <label class="row wide">
                 <input pattern="[0-9]*" minlength="16" maxlength="16" autocomplete="cc-number" name="ccNumber" id="ccNumber"
                   placeholder="XXXXXXXXXXXXXXXX" />
@@ -139,7 +182,7 @@
               </label>
             </div>
           </div>
-          <button>購入</button>
+          <button class="green">購入</button>
         </form>
       </div>
     </div>

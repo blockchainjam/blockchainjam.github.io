@@ -514,7 +514,7 @@ button {
 }
 
 button.green {
-    background: green;
+    background: #60b9a1;
 }
 
 
@@ -736,3 +736,38 @@ button.green {
 /*.twitter-timeline {
     max-width: 1000px !important;
 }*/
+
+.ticket-method {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0;
+}
+.ticket-method h5 {
+  margin-top: 0;
+}
+.ticket-method > div:last-child {
+  flex: auto;
+}
+.radius-rectangle {
+  border-radius: 6px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+.radius-rectangle > div {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  flex: auto;
+}
+.radius-rectangle > a {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background: #60b9a1;
+  margin: 0;
+  padding: 12px;
+}
