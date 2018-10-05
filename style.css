@@ -719,12 +719,16 @@ button.green {
   label.textarea span, label.row input, textarea { width: 100%; }
   
   
-.timetable-img {
-  display: hidden !important;
-}
-.timetable-img.sp {
-  display: initial !important;
-}
+  .timetable-img {
+    display: hidden !important;
+  }
+  .timetable-img.sp {
+    display: initial !important;
+  }
+
+  .ticket-method > div:last-child {
+    width: initial;
+  }
 }
 
 #cover.show {
@@ -754,8 +758,12 @@ button.green {
 .ticket-method h5 {
   margin-top: 0;
 }
+.ticket-method > div:first-child {
+  width: 200px;
+  margin: 0 auto;
+}
 .ticket-method > div:last-child {
-  flex: auto;
+  width: 800px;
 }
 .radius-rectangle {
   border-radius: 6px;
@@ -783,4 +791,10 @@ button.green {
 
 .timetable-img.sp {
   display: none;
+}
+
+.responsible-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
