@@ -716,7 +716,15 @@ button.green {
 	label.row { width: 100%; display: block; margin: 20px 0;}
 	label.row span { display: block; width: 100%; padding: 15px 20px; box-sizing: border-box; text-align: center;}
 
-	label.textarea span, label.row input, textarea { width: 100%; }
+  label.textarea span, label.row input, textarea { width: 100%; }
+  
+  
+.timetable-img {
+  display: hidden !important;
+}
+.timetable-img.sp {
+  display: initial !important;
+}
 }
 
 #cover.show {
@@ -740,6 +748,7 @@ button.green {
 .ticket-method {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 30px 0;
 }
 .ticket-method h5 {
@@ -770,4 +779,8 @@ button.green {
   background: #60b9a1;
   margin: 0;
   padding: 12px;
+}
+
+.timetable-img.sp {
+  display: none;
 }
