@@ -56,6 +56,13 @@ button:hover {
 	margin-bottom: 20px;
 }
 
+.timetable-img-pc {
+  display: initial !important;
+}
+.timetable-img-sp {
+  display: none !important;
+}
+
 
 /*-------------------------
 	Navigation
@@ -637,7 +644,7 @@ button.green {
 	
     .navigation-bar ul li a { font-size: 1em; }
 	.navigation-bar ul li:first-child > a { padding: 0em 0; }
-	.navigation-bar ul li a img { height: 2.2em;　margin: 0.2em 0; }
+	.navigation-bar ul li a img { height: 2.2em; margin: 0.2em 0; }
 	.navigation-bar.fixed #toggle input + span::after  {
         font-size: 3em;
         width: 1em;
@@ -719,10 +726,10 @@ button.green {
   label.textarea span, label.row input, textarea { width: 100%; }
   
   
-  .timetable-img {
+  .timetable-img-pc {
     display: none !important;
   }
-  .timetable-img.sp {
+  .timetable-img-sp {
     display: initial !important;
   }
 
@@ -787,10 +794,6 @@ button.green {
   background: #60b9a1;
   margin: 0;
   padding: 12px;
-}
-
-.timetable-img.sp {
-  display: none;
 }
 
 .responsible-image {
