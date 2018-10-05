@@ -720,7 +720,7 @@ button.green {
   
   
   .timetable-img {
-    display: hidden !important;
+    display: none !important;
   }
   .timetable-img.sp {
     display: initial !important;
