@@ -13,7 +13,7 @@
   </script>
 
   <meta charset="utf-8" />
-  <title>チケット購入 - BlockChainJam</title>
+  <title>チケット購入 - BlockChainJam 2018（ブロックチェーンジャム）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
@@ -36,6 +36,9 @@
         </li>
         <li>
           <a href="/#outline">イベントについて</a>
+        </li>
+        <li>
+          <a href="/#timetable">タイムテーブル</a>
         </li>
         <li>
           <a href="/#topics">登壇者</a>
@@ -66,25 +69,24 @@
       <h4>PURCHASING TICKET</h4>
       <div class="container-1000px">
         <h5>チケット購入方法の選択</h5>
-        <p>BlockChainJam2018のチケットは2種類の方法によりお買い求めいただけます。</p>
+        <p>BlockChainJam 2018のチケットは2種類の方法によりお買い求めいただけます。</p>
         <div class="ticket-method">
           <div>
             <div class="radius-rectangle">
               <div style="background: url(images/ticket-p2p.svg);"></div>
-              <a href="#ticket-p2p">Ticket Peer to Peerで購入</a>
+              <a href="#ticket-p2p">ちけっとピアツーピアで購入</a>
             </div>
           </div>
-          <div>
+          <div class="ticket-method-text">
             <h5>ブロックチェーンを使ったチケットシステム</h5>
             <p>
-              当イベントが、こちらのシステムを使ってチケットを購入できる初めてのイベントとなります！<br />
-              ブロックチェーンでしかできないことを実現させているチケットシステムです。詳しくは<a href="https://jp.techcrunch.com/2018/09/20/lcnem-ticketp2p/" target="_blank">こちら</a>
+              当イベントが『ちけっとピアツーピア（Ticket Peer to Peer）』を使ってチケットを購入できる初めてのイベントとなります！ブロックチェーンでしかできないことを実現させているチケットシステムです。（※ちけっとピアツーピアの詳細は<a href="https://jp.techcrunch.com/2018/09/20/lcnem-ticketp2p/" target="_blank">こちら</a>）
             </p>
             <p>
               【お支払方法】
               <br />
-              クレジットカード[Visa/Master]<br />
-              <img src="images/cc1.svg" height="24" />
+              ◎クレジットカード[Visa/Master]<br />
+              <img src="images/cc1.svg" height="30" />
             </p>
           </div>
         </div>
@@ -95,27 +97,35 @@
               <a href="https://blockchainjam2018.peatix.com/" target="_blank">Peatixで購入</a>
             </div>
           </div>
-          <div>
+          <div class="ticket-method-text">
             <h5>Peatix</h5>
             <p>
-              Peatixアカウントをお持ちの方、クレジットカード（Visa/Master）以外での決済をご希望の方はPeatixにてチケットをお買い求めくださ い。
+              Peatixアカウントをお持ちの方、クレジットカード（Visa/Master）以外での決済をご希望の方はPeatixにてチケットをお買い求めください。
             </p>
             <p>
               【お支払方法】
-              <br />クレジットカード[Visa/Master/JCB/Amex/Diners]<br />
-              <img src="images/cc2.svg" height="24" />
+              <br />◎クレジットカード[Visa/Master/JCB/Amex/Diners]<br />
+              <img src="images/cc2.svg" height="40" />
               <br />
-              コンビニ決済
+              ◎コンビニ決済
               <br />
-              銀行ATM
+              ◎銀行ATM
             </p>
           </div>
         </div>
         <hr />
         <p id="ticket-p2p">
-          ちけっとピアツーピアは、こちらでお買い求めいただけます。
+          『ちけっとピアツーピア』を使用したチケットは、こちらでお買い求めいただけます。
         </p>
+		  
         <form action="javascript:purchase();">
+			
+		<div class="ticket-step">
+          <h5><span>1</span>チケット種類と枚数を<br class="sp-view" />お選びください。</h5>
+          <p>[BlockChainJam 2018 概要]<br />
+          日時……2018/10/21(Sun)<br />
+          時間……14:00 受付開始／19:30 終演予定<br />
+          会場……六本木アカデミーヒルズ　タワーホール</p>
           <h6>チケット購入数</h6>
           <div>
             <label class="row">
@@ -136,8 +146,10 @@
             <span id="studentPurchased"></span>
             <span>/30</span>
           </div>
-
-          <h6>購入者情報</h6>
+		</div>
+		
+		<div class="ticket-step">
+          <h5><span>2</span>購入者様の情報を<br class="sp-view" />ご記入ください。</h5>
           <div>
             お名前<br />
             <label class="row wide">
@@ -183,6 +195,7 @@
                   placeholder="年(4桁)" />
               </label>
             </div>
+          </div>
           </div>
           <button class="green">購入</button>
         </form>

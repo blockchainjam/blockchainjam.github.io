@@ -15,6 +15,7 @@ body {
     height: 100%;
     font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
 	color: #444;
+	background: #f2f2f2;
 }
 
 a, button {
@@ -118,10 +119,10 @@ button:hover {
 .navigation-bar ul li a {
     display: block;
     color: inherit;
-    padding: 0 12px;
+    padding: 0 10px;
     /*line-height: 3.6em;
     height: 3.6em;*/
-	font-size: .85em;
+	font-size: .78em;
 }
 
 .navigation-bar ul li.logo {
@@ -206,11 +207,11 @@ button:hover {
     position: relative;
 	padding: 5em 0 5em;
 }
-#abstract img {
+#abstract > img {
     height: 12em;
     display: block;
     position: absolute;
-    top: -20%;
+    top: -13%;
     left: 50%;
     transform: translateX(-30%);
 }
@@ -251,6 +252,10 @@ button:hover {
     font-size: 1.3em;
 	padding-top: 40px;
 }
+#abstract img.projects {
+	width: 60%;
+	padding: 50px 0 0;
+}
 
 
 /*-------------------------
@@ -281,6 +286,23 @@ button:hover {
 
 #outline p:last-child {
 	margin-bottom: 100px;
+}
+
+/*-------------------------
+	Timetable
+-------------------------*/
+#timetable {
+	margin-bottom: 0px;
+}
+.item.timetable_box {
+	padding-bottom: 0px;
+}
+.timetable_pic {
+	padding: 80px 0 0;
+	background: #FFF;
+}
+.timetable_pic img {
+	max-width: 1500px;
 }
 
 
@@ -318,16 +340,17 @@ button:hover {
 }
 
 #speakers .row .speaker .topic {
+	margin-bottom: 20px;
     font-size: 2.4em;
     font-family: "Heebo";
-  letter-spacing: .12em;
-  display: flex;
-  flex-flow: row wrap;
+	letter-spacing: .12em;
+	display: flex;
+	flex-flow: row wrap;
 }
 #speakers .row .speaker .topic .icon-size {
     height: 1.2em;
 	vertical-align: middle;
-	padding: 0 5px 0 0;
+	padding: 0 10px 0 0;
 }
 #speakers .row .speaker .topic span {
   display: block;
@@ -420,7 +443,7 @@ td .note {
 
 .item {
     padding-bottom: 30px;
-    background: #f2f2f2;
+     /*background: #f2f2f2;*/
 }
 .item a {
     color: black;
@@ -524,6 +547,90 @@ button.green {
     background: #60b9a1;
 }
 
+
+/*-------------------------
+	PURCHASE
+-------------------------*/
+
+.ticket-method {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px 0 100px;
+}
+.ticket-method h5 {
+  margin-top: 10px;
+  letter-spacing: normal;
+  font-family: inherit;
+  font-size: 1.6em;
+  text-align: left;
+}
+.ticket-method p {
+	text-align: left;
+	font-size: .9em;
+	line-height: 1.9em;
+}
+.ticket-method > div:first-child {
+  width: 300px;
+  margin: 0 auto;
+}
+.ticket-method > div:last-child {
+  width: 670px;
+  margin-left: 30px;
+}
+.radius-rectangle {
+  border-radius: 6px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+.radius-rectangle > div {
+  background-size: 250px auto !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  flex: auto;
+}
+.radius-rectangle > a {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background: #60b9a1;
+  margin: 0;
+  padding: 25px;
+}
+#ticket-p2p {
+	margin-top: 50px;
+}
+.ticket-step {
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	border-bottom: 1px #636363 dotted;
+}
+.ticket-step h5,
+.ticket-step p {
+	text-align: left;
+	font-family: inherit;
+}
+.ticket-step h5 {
+	line-height: 2em;
+}
+.ticket-step h5 span {
+	background: #60b9a1;
+	color: #FFF;
+	padding: 10px 15px;
+	margin-right: 15px;
+}
+.ticket-step h6 {
+	font-size: 1.2em;
+}
+.responsible-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
 
 /*-------------------------
 	@media
@@ -663,7 +770,7 @@ button.green {
 	#abstract .concept h3 { font-size: 1.7em; margin: 0 20px 20px 20px; }
 	#abstract .concept h4 { font-size: 1.25em; }
 	#abstract p { line-height: 2.5em; font-size: .9em; padding-top: 20px; }
-	#abstract img {
+	#abstract > img {
 		height: 7em;
 		display: block;
 		position: absolute;
@@ -671,7 +778,7 @@ button.green {
 		left: 50%;
 		transform: translateX(-30%);
 	}
-	
+	#abstract img.projects { width: 90%; }
 	
 	/*---- Outline (~420px) ----*/
 	
@@ -735,6 +842,8 @@ button.green {
 
   .ticket-method > div:last-child {
     width: initial;
+	margin-left: 0;
+	margin-top: 30px;
   }
 }
 
@@ -755,49 +864,3 @@ button.green {
 /*.twitter-timeline {
     max-width: 1000px !important;
 }*/
-
-.ticket-method {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 30px 0;
-}
-.ticket-method h5 {
-  margin-top: 0;
-}
-.ticket-method > div:first-child {
-  width: 200px;
-  margin: 0 auto;
-}
-.ticket-method > div:last-child {
-  width: 800px;
-}
-.radius-rectangle {
-  border-radius: 6px;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-}
-.radius-rectangle > div {
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  flex: auto;
-}
-.radius-rectangle > a {
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background: #60b9a1;
-  margin: 0;
-  padding: 12px;
-}
-
-.responsible-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
