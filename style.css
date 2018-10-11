@@ -269,12 +269,19 @@ button:hover {
     background-repeat: no-repeat;
 }
 
-#outline h3 {
+#outline h3,
+#outline h5 {
     font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 	font-size: 2.3em;
 	line-height: 2em;
 	font-weight: normal;
 	padding: 60px 0;
+}
+
+#outline h5 {
+	font-size: 1.5em;
+	line-height: 2em;
+	padding: 0;
 }
 
 #outline p {
@@ -428,13 +435,31 @@ td .note {
 	Sponsorship
 -------------------------*/
 
-#sponsor p {
+#sponsor p {	
+	clear: both;
     background: white;
     padding: 50px 0;
-	margin: 100px 0;
+	margin: 350px 0 100px;
 	font-size: 1.1em;
 	line-height: 2.7em;
 }
+
+#sponsor .gold .thumb {width: 300px; height: 300px; margin: 0 auto;}
+
+#sponsor .startup {width: 795px; margin: 55px auto 0;}
+#sponsor .startup .thumb {width: 180px; height: 180px; margin-right: 25px; float:left;}
+#sponsor .startup .thumb:last-child {margin-right: 0;}
+
+#sponsor .media {clear: both; width: 650px; margin: 0 auto; padding-top: 65px;}
+#sponsor .media .thumb {width: 200px; height: 200px; margin-right: 25px; float:left;}
+#sponsor .media .thumb:last-child {margin-right: 0;}
+
+#sponsor .organizer {clear: both; width: 545px; margin: 0 auto; padding-top: 65px;}
+#sponsor .organizer .thumb {width: 250px; height: 250px; margin-right: 45px; float:left;}
+#sponsor .organizer .thumb:last-child {margin-right: 0;}
+
+#sponsor h5 {margin: 0 auto 20px; font-weight: normal;}
+#sponsor .thumb img {width: 100%; height: auto;}
 
 
 /*-------------------------
@@ -745,6 +770,29 @@ button.green {
 	#contact form { width: 100%; font-size: 1.5em; }
 }
 
+@media screen and (max-width: 800px) {
+
+	/*---- Sponsorship (~800px) ----*/
+	
+	#sponsor p {margin: 50px 0 100px;}
+	
+	#sponsor .gold .thumb {width: 85%; height: auto; margin: 0 auto;}
+
+	#sponsor .startup {width: 60%; margin: 30px auto 0;}
+	#sponsor .startup .thumb {width: 100%; height: auto; margin: 0 0 30px; float: none;}
+
+	#sponsor .media {width: 100%; margin: 30px auto 0;}
+	#sponsor .media .thumb {width: 65%; height: auto; margin: 0 auto; float: none;}
+	#sponsor .media .thumb:last-child {margin-right: auto;}
+
+	#sponsor .organizer {width: 100%; margin: 30px auto 0;}
+	#sponsor .organizer .thumb {width: 100%; height: auto; margin: 0 auto 30px; float: none;}
+	#sponsor .media .thumb:last-child {margin-right: auto;}
+
+	#sponsor h5 {margin: 0 auto 20px; font-weight: normal;}
+	#sponsor .thumb img {width: 100%; height: auto;}
+}
+
 @media screen and (max-width: 420px) {
 	
 	/*---- Navi (~420px) ----*/
@@ -788,6 +836,7 @@ button.green {
 		background-repeat: no-repeat;
 	}
 	#outline h3 { font-size: 1.6em; padding: 0 0 20px; }
+	#outline h5 { font-size: 1.2em; padding: 0 0 20px; }
 	#outline p { padding: 0 5%; font-size: 1em; line-height: 2.4em !important; }
 	
 	
@@ -799,7 +848,7 @@ button.green {
 	.icon-size { height: 90%; padding-right: 0; }
 	
     #speakers .row .speaker { margin-bottom: 20px; }
-	#speakers .row .speaker .topic { font-size: 1.8em; display: block; }
+	#speakers .row .speaker .topic { font-size: 1.8em; /*display: block;*/ }
     #speakers .profile-image { max-height: 300px; width: 100%; display: block; margin: 0 auto; }
 	#speakers .row .speaker .profile p { font-size: .9em; }
 	#speakers .row .speaker .company { font-size: 1em; line-height: 1.8em;}
