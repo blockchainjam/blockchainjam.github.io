@@ -446,11 +446,11 @@ td .note {
 
 #sponsor .gold .thumb {width: 300px; height: 300px; margin: 0 auto;}
 
-#sponsor .startup {width: 795px; margin: 55px auto 0;}
+#sponsor .startup {width: 1000px; margin: 55px auto 0;}
 #sponsor .startup .thumb {width: 180px; height: 180px; margin-right: 25px; float:left;}
 #sponsor .startup .thumb:last-child {margin-right: 0;}
 
-#sponsor .media {clear: both; width: 650px; margin: 0 auto; padding-top: 65px;}
+#sponsor .media {clear: both; width: 875px; margin: 0 auto; padding-top: 65px;}
 #sponsor .media .thumb {width: 200px; height: 200px; margin-right: 25px; float:left;}
 #sponsor .media .thumb:last-child {margin-right: 0;}
 
